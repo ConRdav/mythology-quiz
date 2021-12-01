@@ -4,43 +4,79 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Nunito Sans', sans-serif ;
+    font-family: 'Nunito+Sans', sans-serif ;
 }
 
 body{
-    background: rgb(165, 132, 81);
+    background: url(../images/background-image.jpg);
+    background-position: 0 0; 
+    background-repeat:no-repeat; 
+    background-size: cover;
 
 }
 
 #quiz-title {
-    font-size: 50px;
     position:absolute;
-    left:30%;
+    top:20%;
+    left:50%;
+    transform:translate(-50%,-80%);
+    font-size:50px;
+    font-weight: 800;
+    color: black;
+
 }
+
 #mortal-btn{
     position: absolute;
-    top:25%;
+    top:40%;
     left:25%;
+    transform: translate(-75%,-60%);
 }
 
 #demi-btn{
     position: absolute;
-    top:25%;
+    top:40%;
     left:50%;
+    transform: translate(-50%,-60%);
 }
+
 
 #olympian-btn{
     position: absolute;
-    top:25%;
+    top:40%;
     left:75%;
+    transform: translate(-25%,-60%);
 }
 
 #mortal-btn button,
 #demi-btn button,
 #olympian-btn button{
-    font-size:50px;
+    font-size:30px;
     font-weight:500;
     color:black;
-    padding:10px 20px;
     border: 2px, black; 
+}
+
+#quiz-rules{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    background: white;
+    border: 2px,black;
+    
+}
+
+#rules-title{
+    height: 50px;
+    width:100%;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#rules-list{
+    padding: 10px 20px;
 }
