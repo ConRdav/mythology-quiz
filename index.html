@@ -9,35 +9,108 @@
 </head>
 <body>
     <!--Start page heading-->
+    <header>
+        <div>
+            <h1 id="quiz-title">Greek Mythology Quiz</h1>
+        </div>
+    </header>
+
+  <!--Difficulty selectors-->
     <div>
-        <h1 id="quiz-title">Greek Mythology Quiz</h1>
+        <h1 id="difficulty-title">Choose your difficulty!</h1>
     </div>
 
     <div id="mortal-btn"><button>Mortal</button></div>
     <div id="demi-btn"><button>Demi-God</button></div>
     <div id="olympian-btn"><button>Olympian</button></div>
 
-    <div id="quiz-rules">
-        <div id="rules-title">
-            <span>Quiz rules</span>
+    <!--Difficulty rules-
+    <div id="mortal-rules">
+        <div class=rules-title>
+            Mortal Difficulty
         </div>
-        <div id="rules-list">
-            <div class="rules">Choose a difficulty to begin the quiz.</div>
-            <div class="rules">Mortal difficulty will give you 30 seconds to answer questions.</div>
-            <div class="rules">Demi-God difficulty will give you 20 seconds to answer questions.</div>
-            <div class="rules">Olympian difficulty will give you 10 seconds to answer questions. </div>
-            <div class="rules">You can only select one answer.</div>
+        <div id="mortal-rules-list">
+            <div class="rules">Select a difficulty to begin the quiz.</div>
+            <div class="rules">You can only select one answer per question.</div>
             <div class="rules">Once the answer is selected you can't change your choice, so be careful!</div>
-            <div class="rules">Once an answer is selected it will be automatically submitted.</div>
             <div class="rules">There's a total of 10 questions per difficulty.</div>
             <div class="rules">Do you have what it takes?</div>
         </div>
+        <div class="buttons">
+            <button class="quit">Change Difficulty</button>
+            <button class="start">Start Quiz</button>
+        </div>
     </div>
-    
-    
+    <div id="demi-rules">
+        <div class=rules-title>
+            Demi-God Difficulty
+        </div>
+        <div id="demi-rules-list">
+            <div class="rules">Select a difficulty to begin the quiz.</div>
+            <div class="rules">You can only select one answer per question.</div>
+            <div class="rules">Once the answer is selected you can't change your choice, so be careful!</div>
+            <div class="rules">There's a total of 10 questions per difficulty.</div>
+            <div class="rules">Do you have what it takes?</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Change Difficulty</button>
+            <button class="start">Start Quiz</button>
+        </div>
+    </div>
+    <div id="olympian-rules">
+        <div class=rules-title>
+            Olympian Difficulty
+        </div>
+        <div id="olympian-rules-list">
+            <div class="rules">Select a difficulty to begin the quiz.</div>
+            <div class="rules">You can only select one answer per question.</div>
+            <div class="rules">Once the answer is selected you can't change your choice, so be careful!</div>
+            <div class="rules">There's a total of 10 questions per difficulty.</div>
+            <div class="rules">Do you have what it takes?</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Change Difficulty</button>
+            <button class="start">Start Quiz</button>
+        </div>
+    </div>-->
 
+    <!-- Quiz Question Area -->
+    <div id="mortal-quiz-area">
+        
+            <div class="quiz-title">
+                <h1>Mortal Difficulty Quiz</h1>       
+            </div>
 
+            <div class="timer">
+                <div class="timer-text">Time Left</div>
+                <div class="timer-sec">15</div>
+            </div>
+        
+            <div id="question">
+                <span>Who is the King of the Gods in Greek Mythology?</span>
+            </div>
 
+            <div id="answer-list">
+                <div class="answers">
+                    <span>Zeus</span>
+                </div>
+                <div class="answers">
+                    <span>Hades</span>
+                </div>
+                <div class="answers">
+                    <span>Poseidon</span>
+                </div>
+                <div class="answers">
+                    <span>Apollo</span>
+                </div>  
+            </div>
+
+            <div class="question-total">
+                <span><p>1</p>Of<p>10</p>Questions</span>
+            </div>
+            <button class="next">Next</button>
+
+    </div>
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>

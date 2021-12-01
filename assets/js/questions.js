@@ -8,7 +8,7 @@ let questions = [
             "Zeus",
             "Hades",
             "Posiedon",
-            "Appolo"
+            "Apollo"
         ]
     },
     {//Question 2

@@ -8,44 +8,57 @@
 }
 
 body{
-    background: url(../images/background-image.jpg);
+    background:burlywood;
+    /*background: url(../images/background-image.jpg);
     background-position: 0 0; 
     background-repeat:no-repeat; 
-    background-size: cover;
+    background-size:cover;*/
 
 }
 
+/* Headings styling */
 #quiz-title {
     position:absolute;
-    top:20%;
+    top:0;
     left:50%;
-    transform:translate(-50%,-80%);
+    transform:translate(-50%);
     font-size:50px;
     font-weight: 800;
     color: black;
 
 }
 
-#mortal-btn{
-    position: absolute;
-    top:40%;
-    left:25%;
-    transform: translate(-75%,-60%);
+#difficulty-title{
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform:translate(-50%,-70%);
+    font-size:40px;
+    font-weight: 800;
+    color: black;
 }
 
-#demi-btn{
+/* Difficulty buttons styling */
+#mortal-btn{
     position: absolute;
     top:40%;
     left:50%;
     transform: translate(-50%,-60%);
 }
 
+#demi-btn{
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translate(-50%,-40%);
+}
+
 
 #olympian-btn{
     position: absolute;
-    top:40%;
-    left:75%;
-    transform: translate(-25%,-60%);
+    top:80%;
+    left:50%;
+    transform: translate(-50%,-80%);
 }
 
 #mortal-btn button,
@@ -57,17 +70,18 @@ body{
     border: 2px, black; 
 }
 
-#quiz-rules{
+/* Difficulty rules styling */
+#mortal-rules,
+#demi-rules,
+#olympian-rules{
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-30%);
+    transform: translate(-50%,-50%);
     background: white;
-    border: 2px,black;
-    
 }
 
-#rules-title{
+.rules-title{
     height: 50px;
     width:100%;
     border-bottom: 2px solid black;
@@ -76,7 +90,11 @@ body{
     font-size: 30px;
     font-weight: 400;
 }
-
-#rules-list{
-    padding: 10px 20px;
+/* Quiz game box styling*/
+#mortal-quiz-area{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
 }
