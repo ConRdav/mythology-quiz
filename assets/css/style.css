@@ -1,0 +1,46 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif ;
+}
+
+body{
+    background: rgb(165, 132, 81);
+
+}
+
+#quiz-title {
+    font-size: 50px;
+    position:absolute;
+    left:30%;
+}
+#mortal-btn{
+    position: absolute;
+    top:25%;
+    left:25%;
+}
+
+#demi-btn{
+    position: absolute;
+    top:25%;
+    left:50%;
+}
+
+#olympian-btn{
+    position: absolute;
+    top:25%;
+    left:75%;
+}
+
+#mortal-btn button,
+#demi-btn button,
+#olympian-btn button{
+    font-size:50px;
+    font-weight:500;
+    color:black;
+    padding:10px 20px;
+    border: 2px, black; 
+}
