@@ -1,7 +1,7 @@
 // This is used to store the questions for the quiz
 let questions = [
     {//Question 1
-        question:"Who is the King of the Gods in Greek Mythology?",
+        question:"Who is the King of the Gods?",
         correctAnswer:"Zeus",
         answers:
         [
@@ -12,101 +12,101 @@ let questions = [
         ]
     },
     {//Question 2
-        question:"Who is the King of the Gods in Greek Mythology?",
-        correctAnswer:"Zeus",
+        question:"Who is the God of the sea?",
+        correctAnswer:"Posiedon",
         answers:
         [
             "Zeus",
-            "Hades",
+            "Pontus",
             "Posiedon",
-            "Appolo"
+            "Triton"
         ]
     },
     {//Question 3
-        question:"Who is the King of the Gods in Greek Mythology?",
-        correctAnswer:"Zeus",
+        question:"Who is the God of the underworld?",
+        correctAnswer:"Hades",
         answers:
         [
             "Zeus",
             "Hades",
-            "Posiedon",
-            "Appolo"
+            "Thanatos",
+            "Persephone"
         ]
     },
     {//Question 4
-        question:"Who is the King of the Gods in Greek Mythology?",
-        correctAnswer:"Zeus",
+        question:"Who is the Queen of the Gods?",
+        correctAnswer:"Hera",
         answers:
         [
-            "Zeus",
-            "Hades",
-            "Posiedon",
-            "Appolo"
+            "Hera",
+            "Hestia",
+            "Athena",
+            "Demeter"
         ]
     },
     {//Question 5
-        question:"Who is the King of the Gods in Greek Mythology?",
-        correctAnswer:"Zeus",
+        question:"Who is the God of war?",
+        correctAnswer:"Ares",
         answers:
         [
             "Zeus",
-            "Hades",
-            "Posiedon",
+            "Ares",
+            "Kratos",
             "Appolo"
         ]
     },
     {//Question 6
-        question:"Who is the King of the Gods in Greek Mythology?",
-        correctAnswer:"Zeus",
+        question:"Who was tasked with 12 labours?",
+        correctAnswer:"Hercules",
         answers:
         [
-            "Zeus",
-            "Hades",
-            "Posiedon",
-            "Appolo"
+            "Hercules",
+            "Perseus",
+            "Theseus",
+            "Jason"
         ]
     },
     {//Question 7
-        question:"Who is the King of the Gods in Greek Mythology?",
-        correctAnswer:"Zeus",
+        question:"Who embarked on an odyssey?",
+        correctAnswer:"Odysseus",
         answers:
         [
-            "Zeus",
-            "Hades",
-            "Posiedon",
-            "Appolo"
+            "Odysseus",
+            "Hercules",
+            "Achilles",
+            "Zeus"
         ]
     },
     {//Question 8
-        question:"Who is the King of the Gods in Greek Mythology?",
-        correctAnswer:"Zeus",
+        question:"Who brought the humans fire?",
+        correctAnswer:"Prometheus",
         answers:
         [
-            "Zeus",
+            "Prometheus",
             "Hades",
             "Posiedon",
             "Appolo"
         ]
     },
     {//Question 9
-        question:"Who is the King of the Gods in Greek Mythology?",
-        correctAnswer:"Zeus",
+        question:"Where did the Olympians live?",
+        correctAnswer:"Mount Olympus",
         answers:
         [
-            "Zeus",
-            "Hades",
-            "Posiedon",
-            "Appolo"
+            "Mount Olympus",
+            "Mount Everest",
+            "Mount Othrys",
+            "Mount Vesuvius"
         ]
     },
     {//Question 10
-        question:"Who is the King of the Gods in Greek Mythology?",
-        correctAnswer:"Zeus",
+        question:"Who is the messenger god?",
+        correctAnswer:"Hermes",
         answers:
         [
-            "Zeus",
-            "Hades",
-            "Posiedon",
+            "Hermes",
+            "Fedex",
+            "Helios",
             "Appolo"
         ]
     },
