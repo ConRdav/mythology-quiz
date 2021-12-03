@@ -24,33 +24,35 @@
     <div id="demi-btn"><button>Demi-God</button></div>
     <div id="olympian-btn"><button>Olympian</button></div>
 
-    <!--Difficulty rules-
+    <!--Difficulty rules-->
     <div id="mortal-rules">
         <div class=rules-title>
-            Mortal Difficulty
+            <span>Mortal Difficulty</span>
         </div>
-        <div id="mortal-rules-list">
-            <div class="rules">Select a difficulty to begin the quiz.</div>
-            <div class="rules">You can only select one answer per question.</div>
-            <div class="rules">Once the answer is selected you can't change your choice, so be careful!</div>
-            <div class="rules">There's a total of 10 questions per difficulty.</div>
-            <div class="rules">Do you have what it takes?</div>
+        <div class="rules-list">
+            <div class="rules">1. So you think you believe your knowledge to match that of an Mortal?</div>
+            <div class="rules">2. As you have picked Mortal difficulty you have only 30 seconds to answer each question!</div>
+            <div class="rules">3. You can only select one answer per question.</div>
+            <div class="rules">4. Once the answer is selected you can't change your choice, so be careful!</div>
+            <div class="rules">5. There's a total of 10 questions per difficulty.</div>
+            <div class="rules">6. Do you have what it takes?</div>
         </div>
-        <div class="buttons">
-            <button class="quit">Change Difficulty</button>
-            <button class="start">Start Quiz</button>
+        <div class="rules-footer">
+            <button class="quit-btn">Change Difficulty</button>
+            <button class="start-btn">Start Quiz</button>
         </div>
     </div>
     <div id="demi-rules">
         <div class=rules-title>
-            Demi-God Difficulty
+            <span>Demi-God Difficulty</span>
         </div>
-        <div id="demi-rules-list">
-            <div class="rules">Select a difficulty to begin the quiz.</div>
-            <div class="rules">You can only select one answer per question.</div>
-            <div class="rules">Once the answer is selected you can't change your choice, so be careful!</div>
-            <div class="rules">There's a total of 10 questions per difficulty.</div>
-            <div class="rules">Do you have what it takes?</div>
+        <div class="rules-list">
+            <div class="rules">1. So you think you believe your knowledge to match that of an Demi-God?</div>
+            <div class="rules">2. As you have picked Demi-God difficulty you have only 20 seconds to answer each question!</div>
+            <div class="rules">3. You can only select one answer per question.</div>
+            <div class="rules">4. Once the answer is selected you can't change your choice, so be careful!</div>
+            <div class="rules">5. There's a total of 10 questions per difficulty.</div>
+            <div class="rules">6. Do you have what it takes?</div>
         </div>
         <div class="buttons">
             <button class="quit">Change Difficulty</button>
@@ -59,58 +61,48 @@
     </div>
     <div id="olympian-rules">
         <div class=rules-title>
-            Olympian Difficulty
+            <span>Olympian Difficulty</span>
         </div>
-        <div id="olympian-rules-list">
-            <div class="rules">Select a difficulty to begin the quiz.</div>
-            <div class="rules">You can only select one answer per question.</div>
-            <div class="rules">Once the answer is selected you can't change your choice, so be careful!</div>
-            <div class="rules">There's a total of 10 questions per difficulty.</div>
-            <div class="rules">Do you have what it takes?</div>
+        <div class="rules-list">
+            <div class="rules">1. So you think you believe your knowledge to match that of an Olympian?</div>
+            <div class="rules">2. As you have picked Olympian difficulty you have only 10 seconds to answer each question!</div>
+            <div class="rules">3. You can only select one answer per question.</div>
+            <div class="rules">4. Once the answer is selected you can't change your choice, so be careful!</div>
+            <div class="rules">5. There's a total of 10 questions per difficulty.</div>
+            <div class="rules">6. Do you have what it takes?</div>
         </div>
         <div class="buttons">
             <button class="quit">Change Difficulty</button>
             <button class="start">Start Quiz</button>
         </div>
-    </div>-->
+    </div>
 
-    <!-- Quiz Question Area -->
-    <div id="mortal-quiz-area">
-        
-            <div class="quiz-title">
-                <h1>Mortal Difficulty Quiz</h1>       
+    <!-- Quiz Question Area 
+    <div id="quiz-container" class="hide">
+
+        <div class="container-header">
+            <div class="question">
+                <span>Who was tasked with completing 12 labours?</span>
             </div>
-
             <div class="timer">
                 <div class="timer-text">Time Left</div>
                 <div class="timer-sec">15</div>
             </div>
+        </div>
         
-            <div id="question">
-                <span>Who is the King of the Gods in Greek Mythology?</span>
+            <div class="answer-list">
+              <button class="answer-btn">Zeus</button>
+              <button class="answer-btn">Posiedon</button>
+              <button class="answer-btn">Hades</button>
+              <button class="answer-btn">Apollo</button>
             </div>
 
-            <div id="answer-list">
-                <div class="answers">
-                    <span>Zeus</span>
-                </div>
-                <div class="answers">
-                    <span>Hades</span>
-                </div>
-                <div class="answers">
-                    <span>Poseidon</span>
-                </div>
-                <div class="answers">
-                    <span>Apollo</span>
-                </div>  
+            <div class="question-tally">
+                <div class="tally-text">Questions Left</div>
+                <div class="tally-left">10</div>
             </div>
-
-            <div class="question-total">
-                <span><p>1</p>Of<p>10</p>Questions</span>
-            </div>
-            <button class="next">Next</button>
-
-    </div>
+            <button class="next-btn">Next</button>
+    </div>-->
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>
