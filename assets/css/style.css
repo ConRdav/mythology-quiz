@@ -199,3 +199,18 @@ header{
     color: white;
     cursor:pointer;
 }
+
+/*class for correct and wrong answers*/
+.answer-btn.correct{
+    background:green;
+}
+
+.answer-btn.wrong{
+    background: red;
+    color:white;
+}
+
+/* Class to hide containers until activated by JavaScript*/
+.hide{
+    display: none;
+}
