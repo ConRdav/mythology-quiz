@@ -16,19 +16,19 @@
     </header>
 
     <!--Difficulty selectors-->
-    <div>
+    <div class="hide">
         <h1 id="difficulty-title">Choose your difficulty!</h1>
     </div>
 
     <div id="difficulty-selector">
-        <button id="mortal-btn" class="difficulty-btn">Mortal</button>
-        <button id="demi-btn" class="difficulty-btn">Demi-God</button>
-        <button id="olympian-btn" class="difficulty-btn">Olympian</button>
+        <button id="mortal-btn" class="difficulty-btn hide">Mortal</button>
+        <button id="demi-btn" class="difficulty-btn hide">Demi-God</button>
+        <button id="olympian-btn" class="difficulty-btn hide">Olympian</button>
     </div>
    
 
     <!--Difficulty rules-->
-    <div class="rules-container hide">
+    <div class="rules-container">
         <div id="mortal-rules">
             <div class=rules-title>
                 <span>Mortal Difficulty</span>
@@ -43,12 +43,12 @@
             </div>
             <div class="rules-footer">
                 <button class="change-btn">Change Difficulty</button>
-                <button class="start-btn">Start Quiz</button>
+                <button id="mortal-start-btn" class="start-btn">Start Quiz</button>
             </div>
         </div>
     </div>
-    <div class="rules-container hide">
-        <div id="demi-rules">
+    <div class="rules-container">
+        <div id="demi-rules" class="hide">
             <div class=rules-title>
                 <span>Demi-God Difficulty</span>
             </div>
@@ -62,12 +62,12 @@
             </div>
             <div class="rules-footer">
                 <button class="change-btn">Change Difficulty</button>
-                <button class="start-btn">Start Quiz</button>
+                <button id="demi-start-btn" class="start-btn">Start Quiz</button>
             </div>
         </div>
     </div>
-    <div class="rules-container hide">
-        <div id="olympian-rules">
+    <div class="rules-container">
+        <div id="olympian-rules" class="hide">
             <div class=rules-title>
                 <span>Olympian Difficulty</span>
             </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="rules-footer">
                 <button class="change-btn">Change Difficulty</button>
-                <button class="start-btn">Start Quiz</button>
+                <button id="olympian-start-btn"class="start-btn">Start Quiz</button>
             </div>
         </div>
     </div>
