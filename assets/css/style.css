@@ -155,7 +155,7 @@ header{
     border-bottom: 2px solid black;
 }
 
-.question{
+#question{
     font-size: 3rem;
     font-weight: 600;
     padding: 10px;
