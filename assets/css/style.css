@@ -133,3 +133,69 @@ header{
     color: white;
     cursor:pointer;
 }
+
+/*Quiz game container*/
+
+#quiz-game-container{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#quiz-container{
+    background: grey;
+    width: 60%;
+    height:60%;
+    border-radius: 5px;
+}
+
+.container-header{
+    border-bottom: 2px solid black;
+}
+
+.question{
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 10px;
+    text-align:center;
+    border-bottom: 2px solid black;
+}
+
+.answer-list{
+    display:grid;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.answer-btn{
+    font-size:1.5rem;
+    font-weight:800;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+.answer-btn:hover{
+    background:grey;
+    color: white;
+    cursor:pointer;
+}
+
+.next-btn{
+    font-size:1.5rem;
+    font-weight:800;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.next-btn:hover{
+    background:grey;
+    color: white;
+    cursor:pointer;
+}
