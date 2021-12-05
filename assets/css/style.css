@@ -59,3 +59,77 @@ header{
     color: white;
     cursor:pointer;
 }
+
+/*Quiz rules container styling*/
+
+.rules-container{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#mortal-rules,
+#demi-rules,
+#olympian-rules{
+    background: grey;
+    width: 60%;
+    height:60%;
+    border-radius: 5px;
+}
+
+.rules-title{
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 10px;
+    text-align:center;
+    border-bottom: 2px solid black;
+}
+
+.rules-list{
+    margin-top: 20px;
+    padding:10px;
+    text-align: center;
+}
+
+.rules{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.rules-footer{
+    margin-top: 60px;
+}
+
+.change-btn{
+    font-size:1.5rem;
+    font-weight:800;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+.change-btn:hover{
+    background:grey;
+    color: white;
+    cursor:pointer;
+}
+
+.start-btn{
+    font-size:1.5rem;
+    font-weight:800;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+.start-btn:hover{
+    background:grey;
+    color: white;
+    cursor:pointer;
+}
