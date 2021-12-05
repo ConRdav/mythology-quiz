@@ -1,12 +1,61 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&display=swap');
+
+/*Setting font-size for 100% as using rem for font-size*/
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
     font-family: 'Nunito+Sans', sans-serif ;
+    font-size: 100%;
 }
 
 body{
     background:burlywood;
+    width:100vw;
+    height:100vh;  
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+#quiz-title{
+    font-size: 4rem;
+    font-weight: 800;
+    border-bottom: 5px solid black;
+}
+
+/* Difficulty selector styling*/
+
+#difficulty-title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:40px;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#difficulty-selector{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.difficulty-btn{
+    margin-bottom: 80px;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.difficulty-btn:hover{
+    background:grey;
+    color: white;
+    cursor:pointer;
 }
