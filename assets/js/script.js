@@ -15,6 +15,7 @@ const quizGame = document.getElementById("quiz-container")
 let currentQuestion, currentQuestionIndex
 const questionElement = document.getElementById("question")
 const answersOptions = document.getElementsByClassName('answer-btns')
+const nextButton = document.getElementsByClassName("next-btn")
 
 //all event listeners
 mortalGame.addEventListener('click', startGameMortal)
@@ -26,6 +27,7 @@ olympianDifficulty.addEventListener('click', startOlympianRules)
 mortalChangeDifficulty.addEventListener('click', startChangeDifficultyMortal)
 demiChangeDifficulty.addEventListener('click', startChangeDifficultyDemi)
 olympianChangeDifficulty.addEventListener('click', startChangeDifficultyOlympian)
+
 
 //all functions
 //opens quiz and difficulty rules when difficulty clicked
@@ -77,25 +79,40 @@ function startChangeDifficultyOlympian(){
 function startGameMortal() {
     mortalRules.classList.add('hide')
     quizGame.classList.remove('hide')
-    currentQuestion = questions
+    currentQuestion = questionsMortal
     currentQuestionIndex = 0
     setNextQuestion()  
 }
 
 function startGameDemi() {
+    demiRules.classList.add('hide')
+    quizGame.classList.remove('hide')
+    currentQuestion = questionsDemi
+    currentQuestionIndex = 0
+    setNextQuestion() 
 
 }
 
 function startGameOlympian() {
-
+    olympianRules.classList.add('hide')
+    quizGame.classList.remove('hide')
+    currentQuestion = questionsOlympian
+    currentQuestionIndex = 0
+    setNextQuestion() 
 }
 
 function setNextQuestion() {
     showQuestion(currentQuestion[currentQuestionIndex])
 }
 
-function showQuestion(question) {
-    questionElement.innerText = question.question
+function showQuestion(currentQuestion) {
+    questionElement.innerText = currentQuestion.question
+    document.getElementById("answer-a").innerHTML = currentQuestion.answerA;
+    document.getElementById("answer-b").innerHTML = currentQuestion.answerB;
+    document.getElementById("answer-c").innerHTML = currentQuestion.answerC;
+    document.getElementById("answer-d").innerHTML = currentQuestion.answerD;
+
+    
 
 }
 
@@ -103,4 +120,7 @@ function selectAnswer() {
 
 }
 
-
+function nextButtonClicked() {
+    currentQuestionIndex++
+    setNextQuestion()
+}
