@@ -23,10 +23,10 @@ const olympianChangeDifficulty = document.getElementById("olympian-change-btn")
 
 //quiz game elements
 const quizGame = document.getElementById("quiz-container")
-let shuffledQuestions, currentQuestionIndex
 const questionElement = document.getElementById("question")
 const nextButton = document.getElementById("next-btn")
 const answers = document.getElementsByName("answer");
+let shuffledQuestions, currentQuestionIndex
 
 //all event listeners
 
@@ -142,10 +142,6 @@ function showQuestion(shuffledQuestions) {
     document.getElementById("answer-b").innerHTML = shuffledQuestions.answerB;
     document.getElementById("answer-c").innerHTML = shuffledQuestions.answerC;
     document.getElementById("answer-d").innerHTML = shuffledQuestions.answerD;
-    if (answers.correct) {
-        answers.dataset.correct = answers.correct
-    }
-    answers.addEventListener('click', selectAnswer)
 }
 
 // hides the next button 

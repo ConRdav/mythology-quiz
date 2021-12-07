@@ -141,7 +141,7 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 0;
 }
 
 #quiz-container{
