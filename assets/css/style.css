@@ -185,7 +185,7 @@ header{
 }
 
 .next-btn{
-    font-size:1.5rem;
+    font-size:4rem;
     font-weight:800;
     border: 2px solid black;
     border-radius: 5px;
@@ -213,3 +213,5 @@ header{
 .hide{
     display: none;
 }
+
+

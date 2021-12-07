@@ -121,7 +121,7 @@ let questionsDemi = [
         ]
     },
     {
-        question:"Who slayed the Medusa the Gorgon?",
+        question:"Who slayed Medusa the Gorgon?",
         answers: [
             {option:"Hercules", answer:false},
             {option:"Perseus", answer:true},
@@ -130,7 +130,7 @@ let questionsDemi = [
         ]
     },
     {
-        question:"What was the name of Jason's ship he sailed to get the Golden Fleece?",
+        question:"What was the name of the ship Jason sailed to get the Golden Fleece?",
         answers: [
             {option:"Argo", answer:true},
             {option:"Argonaut", answer:false},

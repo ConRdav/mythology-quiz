@@ -23,10 +23,16 @@ const olympianChangeDifficulty = document.getElementById("olympian-change-btn")
 
 //quiz game elements
 const quizGame = document.getElementById("quiz-container")
-const questionElement = document.getElementById("question")
+const questionElement= document.getElementById("question")
+const answerA = document.getElementById("answer-a")
+const answerB = document.getElementById("answer-b")
+const answerC = document.getElementById("answer-c")
+const answerD = document.getElementById("answer-d")
 const nextButton = document.getElementById("next-btn")
-const answers = document.getElementsByName("answer");
-let shuffledQuestions, currentQuestionIndex
+const answers = document.getElementsByClassName("answer-btn")
+let questionIndex = 0;
+let questionNumber = 1;
+
 
 //all event listeners
 
@@ -44,11 +50,6 @@ olympianChangeDifficulty.addEventListener('click', startChangeDifficultyOlympian
 mortalGame.addEventListener('click', startGameMortal)
 demiGame.addEventListener('click', startGameDemi)
 olympianGame.addEventListener('click', startGameOlympian)
-
-//If next button clicked
-nextButton.addEventListener('click', nextButtonClicked)
-    
-
 
 //all functions
 //opens quiz and difficulty rules when difficulty clicked
@@ -107,75 +108,169 @@ function startChangeDifficultyOlympian(){
 function startGameMortal() {
     mortalRules.classList.add('hide')
     quizGame.classList.remove('hide')
-    shuffledQuestions = questionsMortal.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    setNextQuestion()  
+    document.getElementById("question-number").innerHTML = questionNumber;
+    questionElement.innerHTML = questionsMortal[questionIndex].question
+    answerA.innerHTML = questionsMortal[questionIndex].answers[0].option
+    answerA.onclick = () => {
+        if(questionsMortal[questionIndex].answers[0].answer === true){
+        answerA.classList.add('correct')
+        nextButton.classList.remove('hide')
+        
+    }else{
+        answerA.classList.add('wrong')
+        nextButton.classList.remove('hide')
+    }
+}
+    answerB.innerHTML = questionsMortal[questionIndex].answers[1].option
+    answerB.onclick = () => {
+        if(questionsMortal[questionIndex].answers[1].answer=== true){
+        answerB.classList.add('correct')
+        nextButton.classList.remove('hide')
+    }else{
+        answerB.classList.add('wrong')
+        nextButton.classList.remove('hide')
+    }
+}
+    answerC.innerHTML = questionsMortal[questionIndex].answers[2].option
+    answerC.onclick = () => {
+        if(questionsMortal[questionIndex].answers[2].answer === true){
+        answerC.classList.add('correct')
+        nextButton.classList.remove('hide')
+    }else{
+        answerC.classList.add('wrong')
+        nextButton.classList.remove('hide')
+    }
+}
+    answerD.innerHTML = questionsMortal[questionIndex].answers[3].option
+    answerD.onclick = () => {
+        if(questionsMortal[questionIndex].answers[3].answer === true){
+        answerD.classList.add('correct')
+        nextButton.classList.remove('hide')
+    }else{
+        answerD.classList.add('wrong')
+        nextButton.classList.remove('hide')
+    }
+}
+nextButton.onclick = () => {
+    questionNumber++;
+    questionIndex++;
+    resetAnswers()
+    startGameMortal()
+}
 }
 
 function startGameDemi() {
     demiRules.classList.add('hide')
     quizGame.classList.remove('hide')
-    shuffledQuestions = questionsDemi.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    setNextQuestion()  
-
+    document.getElementById("question-number").innerHTML = questionNumber;
+    questionElement.innerHTML = questionsDemi[questionIndex].question
+    answerA.innerHTML = questionsDemi[questionIndex].answers[0].option
+    answerA.onclick = () => {
+        if(questionsDemi[questionIndex].answers[0].answer === true){
+        answerA.classList.add('correct')
+        nextButton.classList.remove('hide')
+        
+    }else{
+        answerA.classList.add('wrong')
+        nextButton.classList.remove('hide')
+    }
+}
+    answerB.innerHTML = questionsDemi[questionIndex].answers[1].option
+    answerB.onclick = () => {
+        if(questionsDemi[questionIndex].answers[1].answer=== true){
+        answerB.classList.add('correct')
+        nextButton.classList.remove('hide')
+    }else{
+        answerB.classList.add('wrong')
+        nextButton.classList.remove('hide')
+    }
+}
+    answerC.innerHTML = questionsDemi[questionIndex].answers[2].option
+    answerC.onclick = () => {
+        if(questionsDemi[questionIndex].answers[2].answer === true){
+        answerC.classList.add('correct')
+        nextButton.classList.remove('hide')
+    }else{
+        answerC.classList.add('wrong')
+        nextButton.classList.remove('hide')
+    }
+}
+    answerD.innerHTML = questionsDemi[questionIndex].answers[3].option
+    answerD.onclick = () => {
+        if(questionsDemi[questionIndex].answers[3].answer === true){
+        answerD.classList.add('correct')
+        nextButton.classList.remove('hide')
+    }else{
+        answerD.classList.add('wrong')
+        nextButton.classList.remove('hide')
+    }
+}
+nextButton.onclick = () => {
+    questionNumber++;
+    questionIndex++;
+    resetAnswers()
+    startGameDemi()
+}
 }
 
 function startGameOlympian() {
     olympianRules.classList.add('hide')
     quizGame.classList.remove('hide')
-    shuffledQuestions = questionsOlympian.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    setNextQuestion() 
-}
-
-//Loads question when start button and next button clicked
-function setNextQuestion() {
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
-}
-
-//Shows question and answer options
-function showQuestion(shuffledQuestions) {
-    questionElement.innerText = shuffledQuestions.question
-    document.getElementById("answer-a").innerHTML = shuffledQuestions.answerA;
-    document.getElementById("answer-b").innerHTML = shuffledQuestions.answerB;
-    document.getElementById("answer-c").innerHTML = shuffledQuestions.answerC;
-    document.getElementById("answer-d").innerHTML = shuffledQuestions.answerD;
-}
-
-// hides the next button 
-function resetState() {
-    nextButton.classList.add('hide')
-}
-
-//
-function selectAnswer(e) {
-    const selectedButton = e.startGameMortal
-    const correct = selectedButton.dataset.correct
-    Array.from(answers).forEach(answer => {
-        setStatusClass(answer, answer.dataset.correct)
-    })
-    if (shuffledQuestions.length > currentQuestionIndex +1){
-        nextButton.classList.remove('hide') 
-    } 
-}
-
-function setStatusClass(element, correct) {
-    clearStatusClass(element)
-    if (correct) {
-        element.classList.add('correct')
-    } else {
-        element.classList.add('wrong')
+    document.getElementById("question-number").innerHTML = questionNumber;
+    questionElement.innerHTML = questionsOlympian[questionIndex].question
+    answerA.innerHTML = questionsOlympian[questionIndex].answers[0].option
+    answerA.onclick = () => {
+        if(questionsOlympian[questionIndex].answers[0].answer === true){
+        console.log('correct')
+        answerA.classList.add('correct')
+        nextButton.classList.remove('hide')     
+        }else{
+        answerA.classList.add('wrong')
+        nextButton.classList.remove('hide')
+        }
+    }
+    answerB.innerHTML = questionsOlympian[questionIndex].answers[1].option
+    answerB.onclick = () => {
+        if(questionsOlympian[questionIndex].answers[1].answer=== true){
+        answerB.classList.add('correct')
+        nextButton.classList.remove('hide')
+        }else{
+        answerB.classList.add('wrong')
+        nextButton.classList.remove('hide')
+        }
+    }
+    answerC.innerHTML = questionsOlympian[questionIndex].answers[2].option
+    answerC.onclick = () => {
+        if(questionsOlympian[questionIndex].answers[2].answer === true){
+        answerC.classList.add('correct')
+        nextButton.classList.remove('hide')
+        }else{
+        answerC.classList.add('wrong')
+        nextButton.classList.remove('hide')
+       }
+    }
+    answerD.innerHTML = questionsOlympian[questionIndex].answers[3].option
+    answerD.onclick = () => {
+        if(questionsOlympian[questionIndex].answers[3].answer === true){
+        answerD.classList.add('correct')
+        nextButton.classList.remove('hide')
+        }else{
+        answerD.classList.add('wrong')
+        nextButton.classList.remove('hide')
+        }
+    }
+nextButton.onclick = () => {
+    questionNumber++;
+    questionIndex++;
+    resetAnswers()
+    startGameOlympian()
     }
 }
 
-function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
-}
-
-function nextButtonClicked() {
-    currentQuestionIndex++
-    setNextQuestion()
+function resetAnswers(){
+    answerA.classList.remove('correct','wrong','disable-click')
+    answerB.classList.remove('correct','wrong','disable-click')
+    answerC.classList.remove('correct','wrong','disable-click')
+    answerD.classList.remove('correct','wrong','disable-click')
+    nextButton.classList.add('hide')
 }
