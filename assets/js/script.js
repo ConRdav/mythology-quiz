@@ -221,49 +221,52 @@ function startGameOlympian() {
     answerA.innerHTML = questionsOlympian[questionIndex].answers[0].option
     answerA.onclick = () => {
         if(questionsOlympian[questionIndex].answers[0].answer === true){
-        console.log('correct')
-        answerA.classList.add('correct')
-        nextButton.classList.remove('hide')     
+        answerA.classList.add('correct')   
         }else{
         answerA.classList.add('wrong')
-        nextButton.classList.remove('hide')
+        }
+        if([questionIndex]<9){
+            nextButton.classList.remove('hide')
         }
     }
     answerB.innerHTML = questionsOlympian[questionIndex].answers[1].option
     answerB.onclick = () => {
         if(questionsOlympian[questionIndex].answers[1].answer=== true){
         answerB.classList.add('correct')
-        nextButton.classList.remove('hide')
         }else{
         answerB.classList.add('wrong')
-        nextButton.classList.remove('hide')
+        }
+        if([questionIndex]<9){
+            nextButton.classList.remove('hide')
         }
     }
     answerC.innerHTML = questionsOlympian[questionIndex].answers[2].option
     answerC.onclick = () => {
         if(questionsOlympian[questionIndex].answers[2].answer === true){
         answerC.classList.add('correct')
-        nextButton.classList.remove('hide')
         }else{
         answerC.classList.add('wrong')
-        nextButton.classList.remove('hide')
        }
+       if([questionIndex]<9){
+        nextButton.classList.remove('hide')
+    }
     }
     answerD.innerHTML = questionsOlympian[questionIndex].answers[3].option
     answerD.onclick = () => {
         if(questionsOlympian[questionIndex].answers[3].answer === true){
         answerD.classList.add('correct')
-        nextButton.classList.remove('hide')
         }else{
-        answerD.classList.add('wrong')
-        nextButton.classList.remove('hide')
+            answerD.classList.add('wrong')
+        }
+        if([questionIndex]<9){
+            nextButton.classList.remove('hide')
         }
     }
-nextButton.onclick = () => {
-    questionNumber++;
-    questionIndex++;
-    resetAnswers()
-    startGameOlympian()
+    nextButton.onclick = () => {
+        questionNumber++;
+        questionIndex++;
+        resetAnswers()
+        startGameOlympian()
     }
 }
 
