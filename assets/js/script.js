@@ -113,41 +113,69 @@ function startGameMortal() {
     answerA.innerHTML = questionsMortal[questionIndex].answers[0].option
     answerA.onclick = () => {
         if(questionsMortal[questionIndex].answers[0].answer === true){
-        answerA.classList.add('correct')
-        nextButton.classList.remove('hide')
+        answerA.classList.add('correct','no-click')   
+        answerB.classList.add('no-click')
+        answerC.classList.add('no-click')
+        answerD.classList.add('no-click')
         
     }else{
-        answerA.classList.add('wrong')
+        answerA.classList.add('wrong','no-click')
+        answerB.classList.add('no-click')
+        answerC.classList.add('no-click')
+        answerD.classList.add('no-click')
+    }
+    if([questionIndex]<9){
         nextButton.classList.remove('hide')
     }
 }
     answerB.innerHTML = questionsMortal[questionIndex].answers[1].option
     answerB.onclick = () => {
         if(questionsMortal[questionIndex].answers[1].answer=== true){
-        answerB.classList.add('correct')
-        nextButton.classList.remove('hide')
-    }else{
-        answerB.classList.add('wrong')
+            answerB.classList.add('correct','no-click')
+            answerA.classList.add('no-click')
+            answerC.classList.add('no-click')
+            answerD.classList.add('no-click')
+            }else{
+            answerB.classList.add('wrong', 'no-click')
+            answerA.classList.add('no-click')
+            answerC.classList.add('no-click')
+            answerD.classList.add('no-click')
+    }
+    if([questionIndex]<9){
         nextButton.classList.remove('hide')
     }
 }
     answerC.innerHTML = questionsMortal[questionIndex].answers[2].option
     answerC.onclick = () => {
         if(questionsMortal[questionIndex].answers[2].answer === true){
-        answerC.classList.add('correct')
-        nextButton.classList.remove('hide')
-    }else{
-        answerC.classList.add('wrong')
+            answerC.classList.add('correct','no-click')
+            answerA.classList.add('no-click')
+            answerB.classList.add('no-click')
+            answerD.classList.add('no-click')
+            }else{
+            answerC.classList.add('wrong','no-click')
+            answerA.classList.add('no-click')
+            answerB.classList.add('no-click')
+            answerD.classList.add('no-click')
+    }
+    if([questionIndex]<9){
         nextButton.classList.remove('hide')
     }
 }
     answerD.innerHTML = questionsMortal[questionIndex].answers[3].option
     answerD.onclick = () => {
         if(questionsMortal[questionIndex].answers[3].answer === true){
-        answerD.classList.add('correct')
-        nextButton.classList.remove('hide')
-    }else{
-        answerD.classList.add('wrong')
+            answerD.classList.add('correct','no-click')
+            answerA.classList.add('no-click')
+            answerB.classList.add('no-click')
+            answerC.classList.add('no-click')
+            }else{
+            answerD.classList.add('wrong','no-click')
+            answerA.classList.add('no-click')
+            answerB.classList.add('no-click')
+            answerC.classList.add('no-click')
+    }
+    if([questionIndex]<9){
         nextButton.classList.remove('hide')
     }
 }
@@ -167,41 +195,69 @@ function startGameDemi() {
     answerA.innerHTML = questionsDemi[questionIndex].answers[0].option
     answerA.onclick = () => {
         if(questionsDemi[questionIndex].answers[0].answer === true){
-        answerA.classList.add('correct')
-        nextButton.classList.remove('hide')
+            answerA.classList.add('correct','no-click')   
+            answerB.classList.add('no-click')
+            answerC.classList.add('no-click')
+            answerD.classList.add('no-click')
         
     }else{
-        answerA.classList.add('wrong')
+        answerA.classList.add('wrong','no-click')
+        answerB.classList.add('no-click')
+        answerC.classList.add('no-click')
+        answerD.classList.add('no-click')
+    }
+    if([questionIndex]<9){
         nextButton.classList.remove('hide')
     }
 }
     answerB.innerHTML = questionsDemi[questionIndex].answers[1].option
     answerB.onclick = () => {
         if(questionsDemi[questionIndex].answers[1].answer=== true){
-        answerB.classList.add('correct')
-        nextButton.classList.remove('hide')
-    }else{
-        answerB.classList.add('wrong')
-        nextButton.classList.remove('hide')
-    }
+            answerB.classList.add('correct','no-click')
+            answerA.classList.add('no-click')
+            answerC.classList.add('no-click')
+            answerD.classList.add('no-click')
+            }else{
+            answerB.classList.add('wrong', 'no-click')
+            answerA.classList.add('no-click')
+            answerC.classList.add('no-click')
+            answerD.classList.add('no-click')
+        } 
+        if([questionIndex]<9){
+                nextButton.classList.remove('hide')
+        }
 }
     answerC.innerHTML = questionsDemi[questionIndex].answers[2].option
     answerC.onclick = () => {
         if(questionsDemi[questionIndex].answers[2].answer === true){
-        answerC.classList.add('correct')
-        nextButton.classList.remove('hide')
-    }else{
-        answerC.classList.add('wrong')
+            answerC.classList.add('correct','no-click')
+            answerA.classList.add('no-click')
+            answerB.classList.add('no-click')
+            answerD.classList.add('no-click')
+            }else{
+            answerC.classList.add('wrong','no-click')
+            answerA.classList.add('no-click')
+            answerB.classList.add('no-click')
+            answerD.classList.add('no-click')
+    }
+    if([questionIndex]<9){
         nextButton.classList.remove('hide')
     }
 }
     answerD.innerHTML = questionsDemi[questionIndex].answers[3].option
     answerD.onclick = () => {
         if(questionsDemi[questionIndex].answers[3].answer === true){
-        answerD.classList.add('correct')
-        nextButton.classList.remove('hide')
-    }else{
-        answerD.classList.add('wrong')
+            answerD.classList.add('correct','no-click')
+            answerA.classList.add('no-click')
+            answerB.classList.add('no-click')
+            answerC.classList.add('no-click')
+            }else{
+            answerD.classList.add('wrong','no-click')
+            answerA.classList.add('no-click')
+            answerB.classList.add('no-click')
+            answerC.classList.add('no-click')
+    }
+    if([questionIndex]<9){
         nextButton.classList.remove('hide')
     }
 }
@@ -221,9 +277,15 @@ function startGameOlympian() {
     answerA.innerHTML = questionsOlympian[questionIndex].answers[0].option
     answerA.onclick = () => {
         if(questionsOlympian[questionIndex].answers[0].answer === true){
-        answerA.classList.add('correct')   
+        answerA.classList.add('correct','no-click')   
+        answerB.classList.add('no-click')
+        answerC.classList.add('no-click')
+        answerD.classList.add('no-click')
         }else{
-        answerA.classList.add('wrong')
+        answerA.classList.add('wrong','no-click')
+        answerB.classList.add('no-click')
+        answerC.classList.add('no-click')
+        answerD.classList.add('no-click')
         }
         if([questionIndex]<9){
             nextButton.classList.remove('hide')
@@ -232,9 +294,15 @@ function startGameOlympian() {
     answerB.innerHTML = questionsOlympian[questionIndex].answers[1].option
     answerB.onclick = () => {
         if(questionsOlympian[questionIndex].answers[1].answer=== true){
-        answerB.classList.add('correct')
+        answerB.classList.add('correct','no-click')
+        answerA.classList.add('no-click')
+        answerC.classList.add('no-click')
+        answerD.classList.add('no-click')
         }else{
-        answerB.classList.add('wrong')
+        answerB.classList.add('wrong', 'no-click')
+        answerA.classList.add('no-click')
+        answerC.classList.add('no-click')
+        answerD.classList.add('no-click')
         }
         if([questionIndex]<9){
             nextButton.classList.remove('hide')
@@ -243,9 +311,15 @@ function startGameOlympian() {
     answerC.innerHTML = questionsOlympian[questionIndex].answers[2].option
     answerC.onclick = () => {
         if(questionsOlympian[questionIndex].answers[2].answer === true){
-        answerC.classList.add('correct')
+        answerC.classList.add('correct','no-click')
+        answerA.classList.add('no-click')
+        answerB.classList.add('no-click')
+        answerD.classList.add('no-click')
         }else{
-        answerC.classList.add('wrong')
+        answerC.classList.add('wrong','no-click')
+        answerA.classList.add('no-click')
+        answerB.classList.add('no-click')
+        answerD.classList.add('no-click')
        }
        if([questionIndex]<9){
         nextButton.classList.remove('hide')
@@ -254,26 +328,33 @@ function startGameOlympian() {
     answerD.innerHTML = questionsOlympian[questionIndex].answers[3].option
     answerD.onclick = () => {
         if(questionsOlympian[questionIndex].answers[3].answer === true){
-        answerD.classList.add('correct')
+        answerD.classList.add('correct','no-click')
+        answerA.classList.add('no-click')
+        answerB.classList.add('no-click')
+        answerC.classList.add('no-click')
         }else{
-            answerD.classList.add('wrong')
+        answerD.classList.add('wrong','no-click')
+        answerA.classList.add('no-click')
+        answerB.classList.add('no-click')
+        answerC.classList.add('no-click')
         }
         if([questionIndex]<9){
             nextButton.classList.remove('hide')
         }
     }
+}
     nextButton.onclick = () => {
         questionNumber++;
         questionIndex++;
         resetAnswers()
         startGameOlympian()
     }
-}
+
 
 function resetAnswers(){
-    answerA.classList.remove('correct','wrong','disable-click')
-    answerB.classList.remove('correct','wrong','disable-click')
-    answerC.classList.remove('correct','wrong','disable-click')
-    answerD.classList.remove('correct','wrong','disable-click')
+    answerA.classList.remove('correct','wrong','no-click')
+    answerB.classList.remove('correct','wrong','no-click')
+    answerC.classList.remove('correct','wrong','no-click')
+    answerD.classList.remove('correct','wrong','no-click')
     nextButton.classList.add('hide')
 }
