@@ -39,6 +39,7 @@ const scoreElement = document.getElementById("score")
 const resultsPage = document.getElementById("quiz-results")
 const timer = document.getElementById("question-timer")
 
+// Game variables
 let questionIndex = 0;
 let questionNumber = 1;
 let questionSet = [];
@@ -77,18 +78,12 @@ answerD.addEventListener('click', checkAnswer)
 nextButton.addEventListener('click', nextButtonClicked)
 
 //all functions
-
 function startGameRules(e) {
-    console.log('inside startGameRules')
-    console.log(e)
-    console.log(e.target)
-    console.log(e.target.attributes.value.value)
     difficulty = e.target.attributes.value.value
     console.log(difficulty)
     switch (difficulty) {
         case "1":
             // Mortal
-            console.log('mortal difficulty')
             mortalRules.classList.remove('hide')
             mortalDifficulty.classList.add('hide')
             demiDifficulty.classList.add('hide')
@@ -97,7 +92,6 @@ function startGameRules(e) {
             break;
         case "2":
             // Demi
-            console.log('demi difficulty')
             demiRules.classList.remove('hide')
             mortalDifficulty.classList.add('hide')
             demiDifficulty.classList.add('hide')
@@ -106,7 +100,6 @@ function startGameRules(e) {
             break;
         case "3":
             // Olympian
-            console.log('olympian difficulty')
             olympianRules.classList.remove('hide')
             mortalDifficulty.classList.add('hide')
             demiDifficulty.classList.add('hide')
@@ -117,14 +110,10 @@ function startGameRules(e) {
 }
 
 // Goes back to difficulty selectors when clicked
-
 function startChangeGameDifficulty(e) {
-    console.log('inside startChangeGameDifficulty')
-    console.log(e)
     switch (difficulty) {
         case "1":
             // Mortal
-            console.log('change difficulty from mortal')
             mortalRules.classList.add('hide')
             mortalDifficulty.classList.remove('hide')
             demiDifficulty.classList.remove('hide')
@@ -133,7 +122,6 @@ function startChangeGameDifficulty(e) {
             break;
         case "2":
             // Demi
-            console.log('change difficulty from demi')
             demiRules.classList.add('hide')
             mortalDifficulty.classList.remove('hide')
             demiDifficulty.classList.remove('hide')
@@ -142,7 +130,6 @@ function startChangeGameDifficulty(e) {
             break;
         case "3":
             // Olympian
-            console.log('change difficulty from olympian')
             olympianRules.classList.add('hide')
             mortalDifficulty.classList.remove('hide')
             demiDifficulty.classList.remove('hide')
@@ -153,21 +140,17 @@ function startChangeGameDifficulty(e) {
 }
 
 function startGame() {
-    console.log('inside startGame')
     switch (difficulty) {
         case "1":
             // Mortal
-            console.log('mortal to start')
             mortalRules.classList.add('hide')
             break;
         case "2":
             // Demi
-            console.log('demi to start')
             demiRules.classList.add('hide')
             break;
         case "3":
             // Olympian
-            console.log('olympian to start')
             olympianRules.classList.add('hide')
             break;
     }
@@ -176,8 +159,6 @@ function startGame() {
     questionSet = questions.filter((question) => {
         return question.difficulty == difficulty
     });
-    console.log('question set =')
-    console.log(questionSet)
     setQuestion()
     setTimer()
 }
@@ -195,17 +176,14 @@ function setTimer() {
     switch (difficulty) {
         case "1":
             // Mortal
-            console.log('mortal timer')
             timeLeft = 30
             break;
         case "2":
             // Demi
-            console.log('demi timer')
             timeLeft = 20
             break;
         case "3":
             // Olympian
-            console.log('olympian timer')
             timeLeft = 10
             break;
     }
@@ -228,45 +206,34 @@ function countdown() {
 
 function timeUp() {
     freezeAnswers(true)
+    questionSet[questionIndex].answers.forEach((answer, i) => { 
+        if (answer.answer == true) {
+            highlightAnswer(i, true)
+        }
+    });
     nextButton.classList.remove('hide')
 }
 
 function checkAnswer(e) {
-   console.log('inside checkAnswer') 
-   console.log(e)
-   console.log(e.target)
-   console.log(e.target.attributes.index.value)
    let answerIndex = e.target.attributes.index.value
    selectedAnswer = questionSet[questionIndex].answers[answerIndex].option 
    freezeAnswers(false)
    isAnswerSelected = true
-   console.log('selectedAnswer = ' + selectedAnswer)
-   console.log('answers length = ' + questionSet[questionIndex].answers.length)
 
    questionSet[questionIndex].answers.forEach((answer, i) => {   
-    console.log('answer = ')
-    console.log(answer)
-    console.log('i = ')
-    console.log(i)
         if (answer.option == selectedAnswer && answer.answer == true) {
-            console.log('answer = selected answer && answer = true')
             highlightAnswer(i, true)
             scoreTotal++;
         } else if (answer.option == selectedAnswer && answer.answer == false) {
-            console.log('answer = selected answer && answer = false')
             highlightAnswer(i, false)
         } else if (answer.option != selectedAnswer && answer.answer == true) {
-            console.log('answer != selected answer && answer = true')
             highlightAnswer(i, true)
         } else {
             console.log('answer != selected answer && answer != true')
         }
    });
 
-   console.log('questionIndex = ' + questionIndex)
-   console.log('question length = ' + questionSet.length)
    if (questionIndex < (questionSet.length - 1)) {
-        console.log('next question')
         nextButton.classList.remove('hide')
     } else {
         isGameComplete = true;
@@ -284,13 +251,11 @@ function checkAnswer(e) {
 }
 
 function highlightAnswer(answerIndex, isCorrect) {
-    console.log('answerIndex = ' + answerIndex)
-    console.log('isCorrect = ' + isCorrect)
     switch (answerIndex) {
         case 0:
             // A
-            console.log('answer A')
             if (isCorrect == true) {
+                answerA.classList.remove('wrong')
                 answerA.classList.add('correct','no-click')   
             } else {
                 console.log('add wrong style')
@@ -300,6 +265,7 @@ function highlightAnswer(answerIndex, isCorrect) {
         case 1:
             // B
             if (isCorrect == true) {
+                answerB.classList.remove('wrong')
                 answerB.classList.add('correct','no-click')   
             } else {
                 console.log('add wrong style')
@@ -309,6 +275,7 @@ function highlightAnswer(answerIndex, isCorrect) {
         case 2:
             // C
             if (isCorrect == true) {
+                answerC.classList.remove('wrong')
                 answerC.classList.add('correct','no-click')   
             } else {
                 console.log('add wrong style')
@@ -318,6 +285,7 @@ function highlightAnswer(answerIndex, isCorrect) {
         case 3:
             // D
             if (isCorrect == true) {
+                answerD.classList.remove('wrong')
                 answerD.classList.add('correct','no-click')   
             } else {
                 console.log('add wrong style')
@@ -329,8 +297,6 @@ function highlightAnswer(answerIndex, isCorrect) {
 
 function nextButtonClicked() {
     if (isGameComplete != true) {
-        console.log('questionSet length = ' + questionSet.length)
-        console.log('questionIndex = ' + questionIndex)
         questionNumber++;
         questionIndex++;
         resetAnswers()
