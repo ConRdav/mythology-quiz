@@ -1,6 +1,6 @@
 // This is used to store the questions for the quiz
 //Mortal is difficulty 1, Demi is difficulty 2, Olympian is difficulty 3
-let questions = [
+const questions = [
     { 
         question:"Who is the King of the Gods?",
         answers: [
@@ -301,4 +301,4 @@ let questions = [
         ],
         difficulty:3
     },
-]
+];
