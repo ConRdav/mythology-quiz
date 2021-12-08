@@ -153,7 +153,7 @@ function startGame(e) {
             mortalRules.classList.add('hide')
             break;
         case "2":
-            // Dem
+            // Demi
             console.log('demi to start')
             demiRules.classList.add('hide')
             break;

@@ -219,6 +219,28 @@ header{
     color:white;
 }
 
+/* Quiz Results page*/
+#quiz-results-container{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#quiz-results{
+    background: #DBBEA1FF;
+    width: 60%;
+    height:60%;
+    border: 10px solid rgb(75, 33, 14);
+    border-radius: 5px;
+    padding: 100px 50px 100px 50px;
+}
+
+#results{
+    font-size: 3rem;
+    font-weight: 600;
+    
+}
 /* Class to hide containers until activated by JavaScript*/
 .hide{
     display: none;
