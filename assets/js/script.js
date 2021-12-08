@@ -35,11 +35,20 @@ const answerC = document.getElementById("answer-c")
 const answerD = document.getElementById("answer-d")
 const nextButton = document.getElementById("next-btn")
 const answers = document.getElementsByClassName("answer-btn")
+const scoreElement = document.getElementById("score")
+const resultsPage = document.getElementById("quiz-results")
+const timer = document.getElementById("question-timer")
+
 let questionIndex = 0;
 let questionNumber = 1;
 let questionSet = [];
 let selectedAnswer = "";
 let difficulty = null;
+let scoreTotal = 0;
+let isGameComplete = false;
+let timeLeft = null;
+let timerId = null;
+let isAnswerSelected = false;
 
 //all event listeners
 
@@ -143,9 +152,8 @@ function startChangeGameDifficulty(e) {
     }
 }
 
-function startGame(e) {
+function startGame() {
     console.log('inside startGame')
-    console.log(e)
     switch (difficulty) {
         case "1":
             // Mortal
@@ -171,14 +179,56 @@ function startGame(e) {
     console.log('question set =')
     console.log(questionSet)
     setQuestion()
+    setTimer()
 }
 
 function setQuestion() {
+    isAnswerSelected = false;
     questionElement.innerHTML = questionSet[questionIndex].question
     answerA.innerHTML = questionSet[questionIndex].answers[0].option
     answerB.innerHTML = questionSet[questionIndex].answers[1].option
     answerC.innerHTML = questionSet[questionIndex].answers[2].option
     answerD.innerHTML = questionSet[questionIndex].answers[3].option
+}
+
+function setTimer() {
+    switch (difficulty) {
+        case "1":
+            // Mortal
+            console.log('mortal timer')
+            timeLeft = 30
+            break;
+        case "2":
+            // Demi
+            console.log('demi timer')
+            timeLeft = 20
+            break;
+        case "3":
+            // Olympian
+            console.log('olympian timer')
+            timeLeft = 10
+            break;
+    }
+    clearTimeout(timerId)
+    timer.innerHTML = timeLeft;
+    timerId = setInterval(countdown, 1000)
+}
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId)
+        timeUp()
+    } else if (isAnswerSelected) {
+        console.log('freeze timer')
+    } else {
+        timer.innerHTML = timeLeft
+        timeLeft--;
+    }
+}
+
+function timeUp() {
+    freezeAnswers(true)
+    nextButton.classList.remove('hide')
 }
 
 function checkAnswer(e) {
@@ -188,7 +238,8 @@ function checkAnswer(e) {
    console.log(e.target.attributes.index.value)
    let answerIndex = e.target.attributes.index.value
    selectedAnswer = questionSet[questionIndex].answers[answerIndex].option 
-   freezeAnswers()
+   freezeAnswers(false)
+   isAnswerSelected = true
    console.log('selectedAnswer = ' + selectedAnswer)
    console.log('answers length = ' + questionSet[questionIndex].answers.length)
 
@@ -200,7 +251,7 @@ function checkAnswer(e) {
         if (answer.option == selectedAnswer && answer.answer == true) {
             console.log('answer = selected answer && answer = true')
             highlightAnswer(i, true)
-            // Add to score here
+            scoreTotal++;
         } else if (answer.option == selectedAnswer && answer.answer == false) {
             console.log('answer = selected answer && answer = false')
             highlightAnswer(i, false)
@@ -215,12 +266,21 @@ function checkAnswer(e) {
    console.log('questionIndex = ' + questionIndex)
    console.log('question length = ' + questionSet.length)
    if (questionIndex < (questionSet.length - 1)) {
-    console.log('next question')
-    nextButton.classList.remove('hide')
+        console.log('next question')
+        nextButton.classList.remove('hide')
     } else {
+        isGameComplete = true;
+        console.log('scoreTotal = ' + scoreTotal)
+        scoreElement.innerHTML = scoreTotal
+        nextButton.innerHTML = "Results"
         console.log('show results page')
+        nextButton.onclick = () => {
+            showResults()
+        }
+        nextButton.classList.remove('hide')
         // Show results page with score
     }
+    console.log('ScoreTotal = ' + scoreTotal)
 }
 
 function highlightAnswer(answerIndex, isCorrect) {
@@ -268,20 +328,28 @@ function highlightAnswer(answerIndex, isCorrect) {
     }
 
 function nextButtonClicked() {
-    console.log('questionSet length = ' + questionSet.length)
-    console.log('questionIndex = ' + questionIndex)
-    questionNumber++;
-    questionIndex++;
-    resetAnswers()
-    startGame()
+    if (isGameComplete != true) {
+        console.log('questionSet length = ' + questionSet.length)
+        console.log('questionIndex = ' + questionIndex)
+        questionNumber++;
+        questionIndex++;
+        resetAnswers()
+        startGame()
+    }
 }
 
-
-function freezeAnswers() {
-    answerA.classList.add('no-click')
-    answerB.classList.add('no-click')
-    answerC.classList.add('no-click')
-    answerD.classList.add('no-click')
+function freezeAnswers(timeUp) {
+    if (timeUp) {
+        answerA.classList.add('no-click', 'wrong')
+        answerB.classList.add('no-click', 'wrong')
+        answerC.classList.add('no-click', 'wrong')
+        answerD.classList.add('no-click', 'wrong')
+    } else {
+        answerA.classList.add('no-click')
+        answerB.classList.add('no-click')
+        answerC.classList.add('no-click')
+        answerD.classList.add('no-click')
+    }
 }
 
 function resetAnswers(){
@@ -290,4 +358,9 @@ function resetAnswers(){
     answerC.classList.remove('correct','wrong','no-click')
     answerD.classList.remove('correct','wrong','no-click')
     nextButton.classList.add('hide')
+}
+
+function showResults() {
+    quizGame.classList.add('hide')
+    resultsPage.classList.remove('hide')
 }
