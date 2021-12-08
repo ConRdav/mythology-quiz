@@ -8,13 +8,18 @@
     box-sizing: border-box;
     font-family: 'Nunito+Sans', sans-serif ;
     font-size: 100%;
+    color:rgb(75, 33, 14);
 }
 
 body{
-    background:burlywood;
-    width:100vw;
-    height:100vh;  
+    background: url(../images/background-img.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(243, 234, 220);
 }
+    
 
 header{
     display: flex;
@@ -24,7 +29,6 @@ header{
 #quiz-title{
     font-size: 4rem;
     font-weight: 800;
-    border-bottom: 5px solid black;
 }
 
 /* Difficulty selector styling*/
@@ -34,7 +38,7 @@ header{
     justify-content: center;
     align-items: center;
     margin-top:40px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
@@ -49,13 +53,14 @@ header{
     margin-bottom: 80px;
     font-size: 2rem;
     font-weight: 600;
-    border: 2px solid black;
+    border: 2px solid rgb(75, 33, 14);
     border-radius: 5px;
     padding: 5px 10px;
+    background: #DBBEA1FF;
 }
 
 .difficulty-btn:hover{
-    background:grey;
+    background:rgb(75, 33, 14);
     color: white;
     cursor:pointer;
 }
@@ -73,9 +78,10 @@ header{
 #mortal-rules,
 #demi-rules,
 #olympian-rules{
-    background: grey;
+    background: #DBBEA1FF;
     width: 60%;
     height:60%;
+    border: 10px solid rgb(75, 33, 14);
     border-radius: 5px;
 }
 
@@ -106,14 +112,15 @@ header{
 .change-btn{
     font-size:1.5rem;
     font-weight:800;
-    border: 2px solid black;
+    background: white;
+    border: 2px solid rgb(75, 33, 14);
     border-radius: 5px;
     padding: 5px 10px;
     margin-bottom: 20px;
 }
 
 .change-btn:hover{
-    background:grey;
+    background:rgb(75, 33, 14);
     color: white;
     cursor:pointer;
 }
@@ -121,14 +128,15 @@ header{
 .start-btn{
     font-size:1.5rem;
     font-weight:800;
-    border: 2px solid black;
+    background: white;
+    border: 2px solid rgb(75, 33, 14);
     border-radius: 5px;
     padding: 5px 10px;
     margin-bottom: 20px;
 }
 
 .start-btn:hover{
-    background:grey;
+    background:rgb(75, 33, 14);
     color: white;
     cursor:pointer;
 }
@@ -145,22 +153,23 @@ header{
 }
 
 #quiz-container{
-    background: grey;
+    background: #DBBEA1FF;
     width: 60%;
     height:60%;
+    border: 10px solid rgb(75, 33, 14);
     border-radius: 5px;
 }
 
 .container-header{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(75, 33, 14);
 }
 
 #question{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     padding: 10px;
     text-align:center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(75, 33, 14);
 }
 
 .answer-list{
@@ -172,14 +181,15 @@ header{
 .answer-btn{
     font-size:1.5rem;
     font-weight:800;
-    border: 2px solid black;
+    background: white;
+    border: 2px solid rgb(75, 33, 14);
     border-radius: 5px;
     padding: 5px 10px;
     margin-bottom: 20px;
 }
 
 .answer-btn:hover{
-    background:grey;
+    background:rgb(75, 33, 14);
     color: white;
     cursor:pointer;
 }
