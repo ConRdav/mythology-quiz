@@ -77,6 +77,25 @@ answerD.addEventListener('click', checkAnswer)
 // If next button clicked
 nextButton.addEventListener('click', nextButtonClicked)
 
+// Default screen should be 'Greek Mythology Quiz' - with Create username button
+
+// create username
+function createUsername() {
+    // Here will display html for user to create a username
+    // Will be a input text box with a 'Submit' button
+    // On submit button click, onSubmitUsername will be called
+}
+
+function onSubmitUsername() {
+    // Change display to :
+    // 'Welcome Username!"
+    // There should be a button 'Enter'
+}
+
+function enterGame() {
+    // On click of 'Enter' display should show original screen i.e. choose your difficulty
+}
+
 //all functions
 function startGameRules(e) {
     difficulty = e.target.attributes.value.value

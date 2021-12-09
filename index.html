@@ -15,15 +15,29 @@
         </div>
     </header>
 
+    <!--Enter your username-->
+    <div id="username-form-container">
+        <div id="username-form">
+        <form>
+            <label for="username">ENTER YOUR USERNAME:</label><br>
+            <br>
+            <input type="text" id="username" name="username"><br>
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+    </div>
+
     <!--Difficulty selectors-->
-    <div  id="difficulty-title">
+    <div  id="difficulty-title" class="hide">
         <h1>Choose your difficulty!</h1>
     </div>
 
-    <div id="difficulty-selector">
-        <button id="mortal-btn" class="difficulty-btn" value="1">Mortal</button>
-        <button id="demi-btn" class="difficulty-btn" value="2">Demi-God</button>
-        <button id="olympian-btn" class="difficulty-btn" value="3">Olympian</button>
+    <div id="difficulty-selector" class="hide">
+        <button id="mortal-btn" class="difficulty-btn hide" value="1">Mortal</button>
+        <button id="demi-btn" class="difficulty-btn hide" value="2">Demi-God</button>
+        <button id="olympian-btn" class="difficulty-btn hide" value="3">Olympian</button>
     </div>
    
 
