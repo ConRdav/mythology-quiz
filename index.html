@@ -17,7 +17,7 @@
 
     <!--Enter your username-->
     <div id="username-form-container">
-        <div id="username-form">
+        <div id="username-form" class="hide">
         <form>
             <label for="username">ENTER YOUR USERNAME:</label><br>
             <br>
@@ -30,14 +30,14 @@
     </div>
 
     <!--Difficulty selectors-->
-    <div  id="difficulty-title" class="hide">
+    <div  id="difficulty-title" >
         <h1>Choose your difficulty!</h1>
     </div>
 
-    <div id="difficulty-selector" class="hide">
-        <button id="mortal-btn" class="difficulty-btn hide" value="1">Mortal</button>
-        <button id="demi-btn" class="difficulty-btn hide" value="2">Demi-God</button>
-        <button id="olympian-btn" class="difficulty-btn hide" value="3">Olympian</button>
+    <div id="difficulty-selector">
+        <button id="mortal-btn" class="difficulty-btn" value="1">Mortal</button>
+        <button id="demi-btn" class="difficulty-btn" value="2">Demi-God</button>
+        <button id="olympian-btn" class="difficulty-btn" value="3">Olympian</button>
     </div>
    
 
@@ -130,14 +130,12 @@
     <!--Quiz Results Area-->
     <div id="quiz-results-container" >
         <div id="quiz-results" class="hide">
-            <div id="results-header">
-                <div id="results">
-                    <span>Congratulations you scored<p id="score"></p>out of<p>10</p></span>
+                <div id="results-text">
+                    <span>Congratulations<br>you scored<p id="score"></p>out of<p>10</p></span>
                 </div>
-            </div>
-            <div class="controls">
+                <div class="controls">
                 <button class="replay-btn">Play Again?</button>
-            </div>
+                </div>
         </div>
     </div>
 
