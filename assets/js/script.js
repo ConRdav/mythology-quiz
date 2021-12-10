@@ -310,7 +310,7 @@ function timeUp() {
  *  - If the selected answer is wrong, it is highlighted red and the correct answer is highlighted green
  */
 function checkAnswer(e) {
-   let answerIndex = e.target.attributes.index.value;
+   let answerIndex = e.target.attributes.ind.value;
    selectedAnswer = questionSet[questionIndex].answers[answerIndex].option; 
    freezeAnswers(false);
    isAnswerSelected = true;
