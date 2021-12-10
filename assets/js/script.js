@@ -38,6 +38,11 @@ const answers = document.getElementsByClassName("answer-btn")
 const scoreElement = document.getElementById("score")
 const resultsPage = document.getElementById("quiz-results")
 const timer = document.getElementById("question-timer")
+const submitButton = document.getElementById("submit-btn")
+const inputUsername = document.getElementById("username-value")
+const chooseDifficultyTitle = document.getElementById("difficulty-title")
+const usernameForm = document.getElementById("username-form")
+const createUsernameForm = document.getElementById("create-username-form")
 
 // Game variables
 let questionIndex = 0;
@@ -50,6 +55,9 @@ let isGameComplete = false;
 let timeLeft = null;
 let timerId = null;
 let isAnswerSelected = false;
+let username = ""
+
+var myRegEx = /[^a-z\d]/i;
 
 //All event listeners
 
@@ -74,29 +82,33 @@ answerB.addEventListener('click', checkAnswer)
 answerC.addEventListener('click', checkAnswer)
 answerD.addEventListener('click', checkAnswer)
 
-// If next button clicked
+// Button click
 nextButton.addEventListener('click', nextButtonClicked)
+submitButton.addEventListener('click', submitUsername)
 
-// Default screen should be 'Greek Mythology Quiz' - with Create username button
-
-// create username
-function createUsername() {
-    // Here will display html for user to create a username
-    // Will be a input text box with a 'Submit' button
-    // On submit button click, onSubmitUsername will be called
+function submitUsername() {
+    if (inputUsername.value != null && inputUsername.value != undefined && inputUsername.value.length > 0) {
+        let isValidUsername = !(myRegEx.test(inputUsername.value))
+        if (isValidUsername == true) {
+            username = inputUsername.value
+            inputUsername.innerHTML = username
+            proceedToChooseDifficulty()
+        } else {
+            alert("Invalid username. Please input a valid username to proceed.");
+        }
+    } else {
+        alert("Please enter a username before proceeding.")
+    }
 }
 
-function onSubmitUsername() {
-    // Change display to :
-    // 'Welcome Username!"
-    // There should be a button 'Enter'
+function proceedToChooseDifficulty() {
+    usernameForm.classList.add('hide')
+    chooseDifficultyTitle.classList.remove('hide')
+    mortalDifficulty.classList.remove('hide')
+    demiDifficulty.classList.remove('hide')
+    olympianDifficulty.classList.remove('hide')
 }
 
-function enterGame() {
-    // On click of 'Enter' display should show original screen i.e. choose your difficulty
-}
-
-//all functions
 function startGameRules(e) {
     difficulty = e.target.attributes.value.value
     console.log(difficulty)

@@ -17,30 +17,30 @@
 
     <!--Enter your username-->
     <div id="username-form-container">
-        <div id="username-form" class="hide">
-        <form>
-            <label for="username">Enter Your Username:</label><br>
+        <div id="username-form">
+        <form id="create-username-form"> 
+            <label for="username">Please Create A Username Before Proceeding To The Quiz</label><br>
             <br>
-            <input type="text" id="username" name="username"><br>
+            <input type="text" id="username-value" name="username" placeholder="Enter your username here."><br>
             <p> Your username can only contain letters and numbers.</p>
             <br>
-            <input type="submit">
+            <input id="submit-btn" type="button" value="Submit">
             <input type="reset">
         </form>
     </div>
     </div>
 
     <!--Difficulty selectors-->
-    <div  id="difficulty-title" >
+    <div  id="difficulty-title" class="hide">
+        <h1>Welcome <p id="username"></p></h1>
         <h1>Choose Your Difficulty</h1>
     </div>
 
     <div id="difficulty-selector">
-        <button id="mortal-btn" class="difficulty-btn btn" value="1">Mortal</button>
-        <button id="demi-btn" class="difficulty-btn btn" value="2">Demi-God</button>
-        <button id="olympian-btn" class="difficulty-btn btn" value="3">Olympian</button>
+        <button id="mortal-btn" class="difficulty-btn btn hide" value="1">Mortal</button>
+        <button id="demi-btn" class="difficulty-btn btn hide" value="2">Demi-God</button>
+        <button id="olympian-btn" class="difficulty-btn btn hide" value="3">Olympian</button>
     </div>
-   
 
     <!--Difficulty rules-->
     <div class="rules-container">
@@ -134,7 +134,7 @@
     <div id="quiz-results-container" >
         <div id="quiz-results" class="hide">
                 <div id="results-text">
-                    <span>Congratulations<br>you scored<p id="score"></p>out of<p>10</p></span>
+                    <span>Congratulations<p id=username></p>you scored<p id="score"></p>out of<p>10</p></span>
                 </div>
                 <div class="controls">
                 <button id="replay-btn" class="btn">Play Again?</button>
