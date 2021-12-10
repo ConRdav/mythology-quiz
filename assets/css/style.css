@@ -136,7 +136,7 @@ input {
 }
 
 .rules-footer{
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .change-btn{
@@ -173,7 +173,7 @@ input {
 #quiz-container{
     background: #DBBEA1FF;
     width: 60%;
-    height:60%;
+    height:80%;
     border: 10px solid rgb(75, 33, 14);
     border-radius: 5px;
 }
@@ -234,6 +234,7 @@ display: flex;
 /*class for correct and wrong answers*/
 .correct{
     background:green;
+    color: white;
 }
 
 .wrong{
@@ -299,7 +300,6 @@ display: flex;
     } 
 
     #difficulty-title h1{
-        text-align:center;
         margin-top:20px;
         font-size: 2rem;
         font-weight: 600;
@@ -312,5 +312,135 @@ display: flex;
     .difficulty-btn{
         margin-bottom: 40px;
         font-size: 1.5rem;
+    }
+
+    #mortal-rules,
+    #demi-rules,
+    #olympian-rules{
+    width: 80%;
+    height:60%;
+    margin-bottom:20px;   
+    }
+
+    .rules-title{
+        font-size: 2rem;
+    }
+    
+    .rules-list{
+        padding:10px;
+        text-align: center;
+    }
+    
+    .rules{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .rules-footer{
+        margin-top: 10px;
+    }
+    
+    .change-btn{
+        font-size:1rem;
+        font-weight:400;
+        margin-bottom: 10px;
+    }
+    
+    .start-btn{
+        font-size:1rem;
+        font-weight:400;
+        margin-bottom: 10px;
+    }
+    
+    #quiz-container{
+        width: 90%;
+        height: 80%;
+    }
+    
+    #question-counter{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    #timer{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    
+    #question{
+        font-size: 1rem;
+        font-weight: 800;
+    }
+    
+    .answer-list{
+        display:grid;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .answer-btn{
+        font-size:1rem;
+        font-weight:600;
+        background: white;
+        border: 2px solid rgb(75, 33, 14);
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+    }
+    
+    #next-btn{
+        font-size:1rem;
+        font-weight:600;
+        margin-bottom: 10px;
+    }
+
+    .correct{
+        background:green;
+        color: white;
+    }
+    
+    .wrong{
+        background: red;
+        color:white;
+    }
+    
+    /* Quiz Results page*/
+    #quiz-results{
+        width: 90%;
+        height:80%;
+    }
+    
+    #results-text{
+        font-size: 1.5rem;
+        font-weight: 600;
+         
+    }
+
+    .replay-btn{
+        font-size: 1.5rem;
+        font-weight:600;
+    }
+}
+
+/* Tablet devices*/
+@media screen and (max-width: 768px){
+
+    #quiz-title{
+        font-size: 3rem;
+        font-weight: 800;
+    } 
+
+    #difficulty-title h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    #mortal-rules,
+    #demi-rules,
+    #olympian-rules,
+    #quiz-container,
+    #quiz-results{
+    width: 80%;
     }
 }
