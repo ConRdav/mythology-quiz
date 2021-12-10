@@ -69,6 +69,13 @@ let isAnswerSelected = false;
 
 var myRegEx = /[^a-z\d]/i;
 
+const indexMap = new Map([
+    [ "answer-a", 0 ],
+    [ "answer-b", 1 ],
+    [ "answer-c", 2 ],
+    [ "answer-d", 3 ]
+]);
+
 //All event listeners
 
 //If difficulty clicked
@@ -310,8 +317,8 @@ function timeUp() {
  *  - If the selected answer is wrong, it is highlighted red and the correct answer is highlighted green
  */
 function checkAnswer(e) {
-   let answerIndex = e.target.attributes.ind.value;
-   selectedAnswer = questionSet[questionIndex].answers[answerIndex].option; 
+   let answerIndex = indexMap.get(e.target.attributes.id.value);
+   selectedAnswer = questionSet[questionIndex].answers[answerIndex].option;
    freezeAnswers(false);
    isAnswerSelected = true;
 
