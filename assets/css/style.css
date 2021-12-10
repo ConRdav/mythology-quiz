@@ -278,6 +278,9 @@ display: flex;
     font-weight: 600;
     top:0; 
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #replay-btn{
@@ -497,12 +500,13 @@ display: flex;
     #quiz-results{
         width: 90%;
         height:80%;
+        padding: 20px 20px 20px 20px
     }
+
     
-    #results-text{
+    #results-text div{
         font-size: 1.5rem;
         font-weight: 600;
-         
     }
 
     .replay-btn{
@@ -510,6 +514,7 @@ display: flex;
         font-weight:600;
     }
 
+    /*Exit Quiz*/
     #exit-quiz{
         width: 80%;
     }

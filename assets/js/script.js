@@ -116,7 +116,7 @@ resultsButton.addEventListener('click', showResults);
  */
 function submitUsername() {
     if (inputUsername.value != null && inputUsername.value != undefined && inputUsername.value.length > 0) {
-        let isValidUsername = !(myRegEx.test(inputUsername.value));
+        let isValidUsername = !(myRegEx.test(inputUsername.value)) && inputUsername.value.length <= 8;
         if (isValidUsername == true) {
             username = inputUsername.value;
             usernameElement.innerHTML = username;

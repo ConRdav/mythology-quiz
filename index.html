@@ -21,10 +21,10 @@
     <div id="username-form-container">
         <div id="username-form">
         <form id="create-username-form"> 
-            <label for="username-value">Please Create A Username Before Proceeding To The Quiz</label><br>
+            <label for="username-value">Please create a username before proceeding to the quiz</label><br>
             <br>
             <input type="text" id="username-value" name="username" placeholder="Enter your username."><br>
-            <p> Your username can only contain letters and numbers.</p>
+            <p> Your username can only contain letters and numbers, and cannot exceed 8 characters.</p>
             <br>
             <input id="submit-btn" type="button" value="Submit">
             <input type="reset">
@@ -137,7 +137,7 @@
     <div id="quiz-results-container" >
         <div id="quiz-results" class="hide">
                 <div id="results-text">
-                    <div>Congratulations <p id=chosen-username-result></p> you scored<p id="score"></p>out of<p>10</p></div>
+                    <div>Congratulations&nbsp;<p id=chosen-username-result></p> you scored<p id="score"></p>out of<p>10</p></div>
                 </div>
                 <div class="controls">
                 <button id="replay-btn" class="btn">Play Again?</button>
@@ -157,8 +157,6 @@
                     </div>
             </div>
         </div>
-
-
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>
 </body>
