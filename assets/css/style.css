@@ -232,16 +232,9 @@ display: flex;
     display: flex;  
 }
 
-#exit-btn{
-    font-size: 2rem;
-    font-weight:800;
-    border: 2px solid rgb(75, 33, 14);
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-}
-
-#next-btn{
+#exit-btn,
+#next-btn,
+#results-btn{
     font-size: 2rem;
     font-weight:800;
     border: 2px solid rgb(75, 33, 14);
@@ -454,7 +447,9 @@ display: flex;
     #no-btn,
     #yes-btn,
     #exit-btn,
-    #next-btn{
+    #next-btn,
+    #replay-btn,
+    #results-btn{
         font-size:1rem;
         font-weight:600;
         margin-bottom: 10px;

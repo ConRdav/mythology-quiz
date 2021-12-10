@@ -6,52 +6,51 @@
  */
 
 //Start game button
-const mortalGame = document.getElementById("mortal-start-btn")
-const demiGame = document.getElementById("demi-start-btn")
-const olympianGame = document.getElementById("olympian-start-btn")
+const mortalGame = document.getElementById("mortal-start-btn");
+const demiGame = document.getElementById("demi-start-btn");
+const olympianGame = document.getElementById("olympian-start-btn");
 
 //Difficulty selector buttons
-const mortalDifficulty = document.getElementById("mortal-btn")
-const demiDifficulty = document.getElementById("demi-btn")
-const olympianDifficulty = document.getElementById("olympian-btn")
-const difficultyTitle = document.getElementById("difficulty-title")
+const mortalDifficulty = document.getElementById("mortal-btn");
+const demiDifficulty = document.getElementById("demi-btn");
+const olympianDifficulty = document.getElementById("olympian-btn");
+const difficultyTitle = document.getElementById("difficulty-title");
 
 //Difficulty rules
-const mortalRules = document.getElementById("mortal-rules")
-const demiRules = document.getElementById("demi-rules")
-const olympianRules = document.getElementById("olympian-rules")
+const mortalRules = document.getElementById("mortal-rules");
+const demiRules = document.getElementById("demi-rules");
+const olympianRules = document.getElementById("olympian-rules");
 
 //change difficulty button
-const mortalChangeDifficulty = document.getElementById("mortal-change-btn")
-const demiChangeDifficulty = document.getElementById("demi-change-btn")
-const olympianChangeDifficulty = document.getElementById("olympian-change-btn")
+const mortalChangeDifficulty = document.getElementById("mortal-change-btn");
+const demiChangeDifficulty = document.getElementById("demi-change-btn");
+const olympianChangeDifficulty = document.getElementById("olympian-change-btn");
 
 // Container elements
-const quizGame = document.getElementById("quiz-container")
-const questionElement= document.getElementById("question")
-const answerA = document.getElementById("answer-a")
-const answerB = document.getElementById("answer-b")
-const answerC = document.getElementById("answer-c")
-const answerD = document.getElementById("answer-d")
-const answers = document.getElementsByClassName("answer-btn")
-const scoreElement = document.getElementById("score")
-const resultsPage = document.getElementById("quiz-results")
-const timer = document.getElementById("question-timer")
-const inputUsername = document.getElementById("username-value")
-const chooseDifficultyTitle = document.getElementById("difficulty-title")
-const usernameForm = document.getElementById("username-form")
-const createUsernameForm = document.getElementById("create-username-form")
-const usernameElement = document.getElementById("chosen-username")
-const exitQuiz = document.getElementById("exit-quiz")
+const quizGame = document.getElementById("quiz-container");
+const questionElement= document.getElementById("question");
+const answerA = document.getElementById("answer-a");
+const answerB = document.getElementById("answer-b");
+const answerC = document.getElementById("answer-c");
+const answerD = document.getElementById("answer-d");
+const scoreElement = document.getElementById("score");
+const resultsPage = document.getElementById("quiz-results");
+const timer = document.getElementById("question-timer");
+const inputUsername = document.getElementById("username-value");
+const chooseDifficultyTitle = document.getElementById("difficulty-title");
+const usernameForm = document.getElementById("username-form");
+const usernameElement = document.getElementById("chosen-username");
+const usernameElementResult = document.getElementById("chosen-username-result");
+const exitQuiz = document.getElementById("exit-quiz");
 
 // Button elements
-const exitQuizYesButton = document.getElementById("yes-btn")
-const exitQuizNoButton = document.getElementById("no-btn")
-const resultsButton = document.getElementById("results-btn")
-const exitButton = document.getElementById("exit-btn")
-const replayButton = document.getElementById("replay-btn")
-const submitButton = document.getElementById("submit-btn")
-const nextButton = document.getElementById("next-btn")
+const exitQuizYesButton = document.getElementById("yes-btn");
+const exitQuizNoButton = document.getElementById("no-btn");
+const resultsButton = document.getElementById("results-btn");
+const exitButton = document.getElementById("exit-btn");
+const replayButton = document.getElementById("replay-btn");
+const submitButton = document.getElementById("submit-btn");
+const nextButton = document.getElementById("next-btn");
 
 // Game variables
 let questionIndex = 0;
@@ -62,7 +61,7 @@ let difficulty = null;
 let scoreTotal = 0;
 let timeLeft = null;
 let timerId = null;
-let username = ""
+let username = "";
 
 // Game flags
 let isGamePaused = false;
@@ -73,34 +72,34 @@ var myRegEx = /[^a-z\d]/i;
 //All event listeners
 
 //If difficulty clicked
-mortalDifficulty.addEventListener('click', startGameRules)
-demiDifficulty.addEventListener('click', startGameRules)
-olympianDifficulty.addEventListener('click', startGameRules)
+mortalDifficulty.addEventListener('click', startGameRules);
+demiDifficulty.addEventListener('click', startGameRules);
+olympianDifficulty.addEventListener('click', startGameRules);
 
 //If change difficulty clicked
-mortalChangeDifficulty.addEventListener('click', startChangeGameDifficulty)
-demiChangeDifficulty.addEventListener('click', startChangeGameDifficulty)
-olympianChangeDifficulty.addEventListener('click', startChangeGameDifficulty)
+mortalChangeDifficulty.addEventListener('click', startChangeGameDifficulty);
+demiChangeDifficulty.addEventListener('click', startChangeGameDifficulty);
+olympianChangeDifficulty.addEventListener('click', startChangeGameDifficulty);
 
 //If start button clicked
-mortalGame.addEventListener('click', startGame)
-demiGame.addEventListener('click', startGame)
-olympianGame.addEventListener('click', startGame)
+mortalGame.addEventListener('click', startGame);
+demiGame.addEventListener('click', startGame);
+olympianGame.addEventListener('click', startGame);
 
 // If answer clicked
-answerA.addEventListener('click', checkAnswer)
-answerB.addEventListener('click', checkAnswer)
-answerC.addEventListener('click', checkAnswer)
-answerD.addEventListener('click', checkAnswer)
+answerA.addEventListener('click', checkAnswer);
+answerB.addEventListener('click', checkAnswer);
+answerC.addEventListener('click', checkAnswer);
+answerD.addEventListener('click', checkAnswer);
 
 // Button click
-nextButton.addEventListener('click', nextButtonClicked)
-submitButton.addEventListener('click', submitUsername)
-exitButton.addEventListener('click', exitGameClicked)
-replayButton.addEventListener('click', returnToChooseDifficulty)
-exitQuizYesButton.addEventListener('click', returnToChooseDifficulty)
-exitQuizNoButton.addEventListener('click', returnToQuiz)
-resultsButton.addEventListener('click', showResults)
+nextButton.addEventListener('click', nextButtonClicked);
+submitButton.addEventListener('click', submitUsername);
+exitButton.addEventListener('click', exitGameClicked);
+replayButton.addEventListener('click', returnToChooseDifficulty);
+exitQuizYesButton.addEventListener('click', returnToChooseDifficulty);
+exitQuizNoButton.addEventListener('click', returnToQuiz);
+resultsButton.addEventListener('click', showResults);
 
 /**
  * Method called on click of 'Submit' username
@@ -110,16 +109,17 @@ resultsButton.addEventListener('click', showResults)
  */
 function submitUsername() {
     if (inputUsername.value != null && inputUsername.value != undefined && inputUsername.value.length > 0) {
-        let isValidUsername = !(myRegEx.test(inputUsername.value))
+        let isValidUsername = !(myRegEx.test(inputUsername.value));
         if (isValidUsername == true) {
-            username = inputUsername.value
-            usernameElement.innerHTML = username
-            proceedToChooseDifficulty()
+            username = inputUsername.value;
+            usernameElement.innerHTML = username;
+            usernameElementResult.innerHTML = username;
+            proceedToChooseDifficulty();
         } else {
             alert("Invalid username. Please input a valid username to proceed.");
         }
     } else {
-        alert("Please enter a username before proceeding.")
+        alert("Please enter a username before proceeding.");
     }
 }
 
@@ -127,57 +127,57 @@ function submitUsername() {
  * Method to display the Choose Difficulty screen
  */
 function proceedToChooseDifficulty() {
-    usernameForm.classList.add('hide')
-    chooseDifficultyTitle.classList.remove('hide')
-    mortalDifficulty.classList.remove('hide')
-    demiDifficulty.classList.remove('hide')
-    olympianDifficulty.classList.remove('hide')
+    usernameForm.classList.add('hide');
+    chooseDifficultyTitle.classList.remove('hide');
+    mortalDifficulty.classList.remove('hide');
+    demiDifficulty.classList.remove('hide');
+    olympianDifficulty.classList.remove('hide');
 }
 
 /**
  * Method uses a switch statement to generate Game Rules based on the difficulty selected
  */
 function startGameRules(e) {
-    difficulty = e.target.attributes.value.value
-    console.log(difficulty)
+    difficulty = e.target.attributes.value.value;
+    console.log(difficulty);
     switch (difficulty) {
         case "1":
             // Mortal
-            showMortalRules()
+            showMortalRules();
             break;
         case "2":
             // Demi
-            showDemiRules()
+            showDemiRules();
             break;
         case "3":
             // Olympian
-            showOlympianRules()
+            showOlympianRules();
             break;
     }
 }
 
 function showMortalRules() {
-    mortalRules.classList.remove('hide')
-    mortalDifficulty.classList.add('hide')
-    demiDifficulty.classList.add('hide')
-    olympianDifficulty.classList.add('hide')
-    difficultyTitle.classList.add('hide')
+    mortalRules.classList.remove('hide');
+    mortalDifficulty.classList.add('hide');
+    demiDifficulty.classList.add('hide');
+    olympianDifficulty.classList.add('hide');
+    difficultyTitle.classList.add('hide');
 }
 
 function showDemiRules() {
-    demiRules.classList.remove('hide')
-    mortalDifficulty.classList.add('hide')
-    demiDifficulty.classList.add('hide')
-    olympianDifficulty.classList.add('hide')
-    difficultyTitle.classList.add('hide')
+    demiRules.classList.remove('hide');
+    mortalDifficulty.classList.add('hide');
+    demiDifficulty.classList.add('hide');
+    olympianDifficulty.classList.add('hide');
+    difficultyTitle.classList.add('hide');
 }
 
 function showOlympianRules() {
-    olympianRules.classList.remove('hide')
-    mortalDifficulty.classList.add('hide')
-    demiDifficulty.classList.add('hide')
-    olympianDifficulty.classList.add('hide')
-    difficultyTitle.classList.add('hide')
+    olympianRules.classList.remove('hide');
+    mortalDifficulty.classList.add('hide');
+    demiDifficulty.classList.add('hide');
+    olympianDifficulty.classList.add('hide');
+    difficultyTitle.classList.add('hide');
 }
 
 /**
@@ -187,27 +187,27 @@ function startChangeGameDifficulty(e) {
     switch (difficulty) {
         case "1":
             // Mortal
-            mortalRules.classList.add('hide')
-            mortalDifficulty.classList.remove('hide')
-            demiDifficulty.classList.remove('hide')
-            olympianDifficulty.classList.remove('hide')
-            difficultyTitle.classList.remove('hide')
+            mortalRules.classList.add('hide');
+            mortalDifficulty.classList.remove('hide');
+            demiDifficulty.classList.remove('hide');
+            olympianDifficulty.classList.remove('hide');
+            difficultyTitle.classList.remove('hide');
             break;
         case "2":
             // Demi
-            demiRules.classList.add('hide')
-            mortalDifficulty.classList.remove('hide')
-            demiDifficulty.classList.remove('hide')
-            olympianDifficulty.classList.remove('hide')
-            difficultyTitle.classList.remove('hide')
+            demiRules.classList.add('hide');
+            mortalDifficulty.classList.remove('hide');
+            demiDifficulty.classList.remove('hide');
+            olympianDifficulty.classList.remove('hide');
+            difficultyTitle.classList.remove('hide');
             break;
         case "3":
             // Olympian
-            olympianRules.classList.add('hide')
-            mortalDifficulty.classList.remove('hide')
-            demiDifficulty.classList.remove('hide')
-            olympianDifficulty.classList.remove('hide')
-            difficultyTitle.classList.remove('hide')
+            olympianRules.classList.add('hide');
+            mortalDifficulty.classList.remove('hide');
+            demiDifficulty.classList.remove('hide');
+            olympianDifficulty.classList.remove('hide');
+            difficultyTitle.classList.remove('hide');
             break;
     }
 }
@@ -218,23 +218,23 @@ function startChangeGameDifficulty(e) {
  *  - Question and timer generated
  */
 function startGame() {
-    hideRules()
-    quizGame.classList.remove('hide')
-    document.getElementById("question-number").innerHTML = questionNumber
+    hideRules();
+    quizGame.classList.remove('hide');
+    document.getElementById("question-number").innerHTML = questionNumber;
     questionSet = questions.filter((question) => {
-        return question.difficulty == difficulty
+        return question.difficulty == difficulty;
     });
-    setTimer()
-    setQuestion()
+    setTimer();
+    setQuestion();
 }
 
 /**
  * Method to hide rule displays
  */
 function hideRules() {
-    mortalRules.classList.add('hide')
-    demiRules.classList.add('hide')
-    olympianRules.classList.add('hide')
+    mortalRules.classList.add('hide');
+    demiRules.classList.add('hide');
+    olympianRules.classList.add('hide');
 }
 
 /**
@@ -242,11 +242,11 @@ function hideRules() {
  */
 function setQuestion() {
     isAnswerSelected = false;
-    questionElement.innerHTML = questionSet[questionIndex].question
-    answerA.innerHTML = questionSet[questionIndex].answers[0].option
-    answerB.innerHTML = questionSet[questionIndex].answers[1].option
-    answerC.innerHTML = questionSet[questionIndex].answers[2].option
-    answerD.innerHTML = questionSet[questionIndex].answers[3].option
+    questionElement.innerHTML = questionSet[questionIndex].question;
+    answerA.innerHTML = questionSet[questionIndex].answers[0].option;
+    answerB.innerHTML = questionSet[questionIndex].answers[1].option;
+    answerC.innerHTML = questionSet[questionIndex].answers[2].option;
+    answerD.innerHTML = questionSet[questionIndex].answers[3].option;
 }
 
 /**
@@ -256,20 +256,20 @@ function setTimer() {
     switch (difficulty) {
         case "1":
             // Mortal
-            timeLeft = 30
+            timeLeft = 30;
             break;
         case "2":
             // Demi
-            timeLeft = 20
+            timeLeft = 20;
             break;
         case "3":
             // Olympian
-            timeLeft = 10
+            timeLeft = 10;
             break;
     }
-    clearTimeout(timerId)
+    clearTimeout(timerId);
     timer.innerHTML = timeLeft;
-    timerId = setInterval(countdown, 1000)
+    timerId = setInterval(countdown, 1000);
 }
 
 /**
@@ -279,12 +279,12 @@ function setTimer() {
 function countdown() {
     if (isGamePaused != true) {
         if (timeLeft == -1) {
-            clearTimeout(timerId)
-            timeUp()
+            clearTimeout(timerId);
+            timeUp();
         } else if (isAnswerSelected) {
             // timer paused
         } else {
-            timer.innerHTML = timeLeft
+            timer.innerHTML = timeLeft;
             timeLeft--;
         }
     }
@@ -294,13 +294,13 @@ function countdown() {
  * When the timer is up, the answers are frozen and the correct answer is revealed
  */
 function timeUp() {
-    freezeAnswers(true)
+    freezeAnswers(true);
     questionSet[questionIndex].answers.forEach((answer, i) => { 
         if (answer.answer == true) {
-            highlightAnswer(i, true)
+            highlightAnswer(i, true);
         }
     });
-    nextButton.classList.remove('hide')
+    nextButton.classList.remove('hide');
 }
 
 /**
@@ -310,27 +310,27 @@ function timeUp() {
  *  - If the selected answer is wrong, it is highlighted red and the correct answer is highlighted green
  */
 function checkAnswer(e) {
-   let answerIndex = e.target.attributes.index.value
-   selectedAnswer = questionSet[questionIndex].answers[answerIndex].option 
-   freezeAnswers(false)
-   isAnswerSelected = true
+   let answerIndex = e.target.attributes.index.value;
+   selectedAnswer = questionSet[questionIndex].answers[answerIndex].option; 
+   freezeAnswers(false);
+   isAnswerSelected = true;
 
    questionSet[questionIndex].answers.forEach((answer, i) => {   
         if (answer.option == selectedAnswer && answer.answer == true) {
-            highlightAnswer(i, true)
+            highlightAnswer(i, true);
             scoreTotal++;
         } else if (answer.option == selectedAnswer && answer.answer == false) {
-            highlightAnswer(i, false)
+            highlightAnswer(i, false);
         } else if (answer.option != selectedAnswer && answer.answer == true) {
-            highlightAnswer(i, true)
+            highlightAnswer(i, true);
         }
    });
 
    if (questionIndex < (questionSet.length - 1)) {
-        nextButton.classList.remove('hide')
+        nextButton.classList.remove('hide');
     } else {
-        scoreElement.innerHTML = scoreTotal
-        resultsButton.classList.remove('hide')
+        scoreElement.innerHTML = scoreTotal;
+        resultsButton.classList.remove('hide');
     }
 }
 
@@ -344,37 +344,37 @@ function highlightAnswer(answerIndex, isCorrect) {
         case 0:
             // A
             if (isCorrect == true) {
-                answerA.classList.remove('wrong')
-                answerA.classList.add('correct','no-click')   
+                answerA.classList.remove('wrong');
+                answerA.classList.add('correct','no-click') ;  
             } else {
-                answerA.classList.add('wrong','no-click')
+                answerA.classList.add('wrong','no-click');
             }
             break;
         case 1:
             // B
             if (isCorrect == true) {
-                answerB.classList.remove('wrong')
-                answerB.classList.add('correct','no-click')   
+                answerB.classList.remove('wrong');
+                answerB.classList.add('correct','no-click');   
             } else {
-                answerB.classList.add('wrong','no-click')
+                answerB.classList.add('wrong','no-click');
             }
             break;
         case 2:
             // C
             if (isCorrect == true) {
-                answerC.classList.remove('wrong')
-                answerC.classList.add('correct','no-click')   
+                answerC.classList.remove('wrong');
+                answerC.classList.add('correct','no-click'); 
             } else {
-                answerC.classList.add('wrong','no-click')
+                answerC.classList.add('wrong','no-click');
             }
             break;
         case 3:
             // D
             if (isCorrect == true) {
-                answerD.classList.remove('wrong')
-                answerD.classList.add('correct','no-click')   
+                answerD.classList.remove('wrong');
+                answerD.classList.add('correct','no-click');  
             } else {
-                answerD.classList.add('wrong','no-click')
+                answerD.classList.add('wrong','no-click');
             }
             break;
        }
@@ -388,8 +388,8 @@ function highlightAnswer(answerIndex, isCorrect) {
 function nextButtonClicked() {
         questionNumber++;
         questionIndex++;
-        resetAnswers()
-        startGame()
+        resetAnswers();
+        startGame();
 }
 
 /**
@@ -400,15 +400,15 @@ function nextButtonClicked() {
  */
 function freezeAnswers(timeUp) {
     if (timeUp) {
-        answerA.classList.add('no-click', 'wrong')
-        answerB.classList.add('no-click', 'wrong')
-        answerC.classList.add('no-click', 'wrong')
-        answerD.classList.add('no-click', 'wrong')
+        answerA.classList.add('no-click', 'wrong');
+        answerB.classList.add('no-click', 'wrong');
+        answerC.classList.add('no-click', 'wrong');
+        answerD.classList.add('no-click', 'wrong');
     } else {
-        answerA.classList.add('no-click')
-        answerB.classList.add('no-click')
-        answerC.classList.add('no-click')
-        answerD.classList.add('no-click')
+        answerA.classList.add('no-click');
+        answerB.classList.add('no-click');
+        answerC.classList.add('no-click');
+        answerD.classList.add('no-click');
     }
 }
 
@@ -416,49 +416,49 @@ function freezeAnswers(timeUp) {
  * Reset answer classList
  */
 function resetAnswers(){
-    answerA.classList.remove('correct','wrong','no-click')
-    answerB.classList.remove('correct','wrong','no-click')
-    answerC.classList.remove('correct','wrong','no-click')
-    answerD.classList.remove('correct','wrong','no-click')
-    nextButton.classList.add('hide')
+    answerA.classList.remove('correct','wrong','no-click');
+    answerB.classList.remove('correct','wrong','no-click');
+    answerC.classList.remove('correct','wrong','no-click');
+    answerD.classList.remove('correct','wrong','no-click');
+    nextButton.classList.add('hide');
 }
 
 /**
  * Method to display the results screen
  */
 function showResults() {
-    usernameElement.innerHTML = username
-    quizGame.classList.add('hide')
-    resultsPage.classList.remove('hide')
+    usernameElement.innerHTML = username;
+    quizGame.classList.add('hide');
+    resultsPage.classList.remove('hide');
 }
 
 /**
  * Method to display the exit game confirmation screen
  */
 function exitGameClicked() {
-    isGamePaused = true
-    quizGame.classList.add('hide')
-    exitQuiz.classList.remove('hide')
+    isGamePaused = true;
+    quizGame.classList.add('hide');
+    exitQuiz.classList.remove('hide');
 }
 
 /**
  * Method to return to the quiz after cancelling exit game request
  */
 function returnToQuiz() {
-    isGamePaused = false
-    exitQuiz.classList.add('hide')
-    quizGame.classList.remove('hide')
+    isGamePaused = false;
+    exitQuiz.classList.add('hide');
+    quizGame.classList.remove('hide');
 }
 
 /**
  * Method to exit game and return to the choose difficulty screen
  */
 function returnToChooseDifficulty() {
-    quizGame.classList.add('hide')
-    resultsPage.classList.add('hide')
-    exitQuiz.classList.add('hide')
-    resetGame()
-    proceedToChooseDifficulty()
+    quizGame.classList.add('hide');
+    resultsPage.classList.add('hide');
+    exitQuiz.classList.add('hide');
+    resetGame();
+    proceedToChooseDifficulty();
 }
 
 /**
@@ -469,28 +469,28 @@ function returnToChooseDifficulty() {
  *  - Resets variables
  */
 function resetGame() {
-    resetAnswers()
-    resetButtons()
-    resetFlags()
-    resetGameVariables()
+    resetAnswers();
+    resetButtons();
+    resetFlags();
+    resetGameVariables();
 }
 
 function resetGameVariables() {
-    clearTimeout(timerId)
+    clearTimeout(timerId);
     questionIndex = 0;
     questionNumber = 1;
-    questionSet = []
-    selectedAnswer = ""
-    difficulty = null
+    questionSet = [];
+    selectedAnswer = "";
+    difficulty = null;
     scoreTotal = 0;
 }
 
 function resetFlags() {
-    isAnswerSelected = false
-    isGamePaused = false
+    isAnswerSelected = false;
+    isGamePaused = false;
 }
 
 function resetButtons() {
-    nextButton.classList.add('hide')
-    resultsButton.classList.add('hide')
+    nextButton.classList.add('hide');
+    resultsButton.classList.add('hide');
 }
