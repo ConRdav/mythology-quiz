@@ -63,10 +63,10 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
 ![Responsiveness Quiz Game](/assets/images/responsive-quiz-game.webp)
 
 - The exit quiz message is responsive on all screen sizes. As shown in the image below.
-![Responsiveness Exit Quiz](/assets/images/responsive-contact.webp)
+![Responsiveness Exit Quiz](/assets/images/responsive-exit.webp)
 
 - The Quiz results page is responsive on all screen sizes and there were no issues when trying to make it responsive.
-![Responsiveness Quiz Results](/assets/images/responsive-contact.webp)
+![Responsiveness Quiz Results](/assets/images/responsive-results.webp)
 
 -This website was tested on a Iphone 11, Ipad Air 2 and  where all aspects of the website were responsive.
 
