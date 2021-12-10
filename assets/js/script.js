@@ -51,7 +51,7 @@ let timeLeft = null;
 let timerId = null;
 let isAnswerSelected = false;
 
-//all event listeners
+//All event listeners
 
 //If difficulty clicked
 mortalDifficulty.addEventListener('click', startGameRules)

@@ -19,7 +19,7 @@
     <div id="username-form-container">
         <div id="username-form" class="hide">
         <form>
-            <label for="username">ENTER YOUR USERNAME:</label><br>
+            <label for="username">Enter Your Username:</label><br>
             <br>
             <input type="text" id="username" name="username"><br>
             <br>
@@ -31,13 +31,13 @@
 
     <!--Difficulty selectors-->
     <div  id="difficulty-title" >
-        <h1>Choose your difficulty!</h1>
+        <h1>Choose Your Difficulty</h1>
     </div>
 
     <div id="difficulty-selector">
-        <button id="mortal-btn" class="difficulty-btn" value="1">Mortal</button>
-        <button id="demi-btn" class="difficulty-btn" value="2">Demi-God</button>
-        <button id="olympian-btn" class="difficulty-btn" value="3">Olympian</button>
+        <button id="mortal-btn" class="difficulty-btn btn" value="1">Mortal</button>
+        <button id="demi-btn" class="difficulty-btn btn" value="2">Demi-God</button>
+        <button id="olympian-btn" class="difficulty-btn btn" value="3">Olympian</button>
     </div>
    
 
@@ -48,7 +48,7 @@
                 <span>Mortal Difficulty</span>
             </div>
             <div class="rules-list">
-                <div class="rules">So you think you believe your knowledge to match that of an Mortal?</div>
+                <div class="rules">So you believe your knowledge of Greek Mythology matches that of an Mortal?</div>
                 <div class="rules">As you have picked Mortal difficulty you have only 30 seconds to answer each question!</div>
                 <div class="rules">You can only select one answer per question.</div>
                 <div class="rules">Once the answer is selected you can't change your choice, so be careful!</div>
@@ -56,8 +56,8 @@
                 <div class="rules">Do you have what it takes?</div>
             </div>
             <div class="rules-footer">
-                <button id="mortal-change-btn" class="change-btn" >Change Difficulty</button>
-                <button id="mortal-start-btn" class="start-btn">Start Quiz</button>
+                <button id="mortal-change-btn" class="change-btn btn" >Change Difficulty</button>
+                <button id="mortal-start-btn" class="start-btn btn">Start Quiz</button>
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@
                 <span>Demi-God Difficulty</span>
             </div>
             <div class="rules-list">
-                <div class="rules">So you think you believe your knowledge to match that of an Demi-God?</div>
+                <div class="rules">So you believe your knowledge of Greek Mythology matches that of an Demi-God?</div>
                 <div class="rules">As you have picked Demi-God difficulty you have only 20 seconds to answer each question!</div>
                 <div class="rules">You can only select one answer per question.</div>
                 <div class="rules">Once the answer is selected you can't change your choice, so be careful!</div>
@@ -75,8 +75,8 @@
                 <div class="rules">Do you have what it takes?</div>
             </div>
             <div class="rules-footer">
-                <button id="demi-change-btn" class="change-btn">Change Difficulty</button>
-                <button id="demi-start-btn" class="start-btn">Start Quiz</button>
+                <button id="demi-change-btn" class="change-btn btn">Change Difficulty</button>
+                <button id="demi-start-btn" class="start-btn btn">Start Quiz</button>
             </div>
         </div>
     </div>
@@ -94,8 +94,8 @@
                 <div class="rules">Do you have what it takes?</div>
             </div>
             <div class="rules-footer">
-                <button id="olympian-change-btn" class="change-btn">Change Difficulty</button>
-                <button id="olympian-start-btn"class="start-btn">Start Quiz</button>
+                <button id="olympian-change-btn" class="change-btn btn">Change Difficulty</button>
+                <button id="olympian-start-btn"class="start-btn btn">Start Quiz</button>
             </div>
         </div>
     </div>
@@ -104,25 +104,26 @@
     <div id="quiz-game-container" >
         <div id="quiz-container" class="hide" >
             <div class="container-header">
-                <div class="game-info-box">
+                <div id="game-info-box">
+                    <div id="question-counter">
                     <h1> Question: <span id="question-number"></span> / 10</h1>
+                    </div>
+                    <div id="timer">
                     <h1> Time Left: <span id="question-timer"></span></h1>
-
-                    
-    
+                    </div>
                 </div>
                 <div id="question">
                     <span></span>
                 </div>
             </div>
             <div class="answer-list">
-                <button id="answer-a" class="answer-btn" index=0></button>
-                <button id="answer-b" class="answer-btn" index=1></button>
-                <button id="answer-c" class="answer-btn" index=2></button>
-                <button id="answer-d" class="answer-btn" index=3></button>
+                <button id="answer-a" class="answer-btn btn" index=0></button>
+                <button id="answer-b" class="answer-btn btn" index=1></button>
+                <button id="answer-c" class="answer-btn btn" index=2></button>
+                <button id="answer-d" class="answer-btn btn" index=3></button>
             </div>
             <div class="controls">
-                <button id="next-btn" class="hide">Next</button>
+                <button id="next-btn" class="btn hide">Next</button>
             </div>
         </div>
     </div>
@@ -134,7 +135,7 @@
                     <span>Congratulations<br>you scored<p id="score"></p>out of<p>10</p></span>
                 </div>
                 <div class="controls">
-                <button class="replay-btn">Play Again?</button>
+                <button class="replay-btn btn">Play Again?</button>
                 </div>
         </div>
     </div>
