@@ -33,15 +33,14 @@ const answerA = document.getElementById("answer-a");
 const answerB = document.getElementById("answer-b");
 const answerC = document.getElementById("answer-c");
 const answerD = document.getElementById("answer-d");
-const scoreElement = document.getElementById("score");
 const resultsPage = document.getElementById("quiz-results");
 const timer = document.getElementById("question-timer");
 const inputUsername = document.getElementById("username-value");
 const chooseDifficultyTitle = document.getElementById("difficulty-title");
 const usernameForm = document.getElementById("username-form");
 const usernameElement = document.getElementById("chosen-username");
-const usernameElementResult = document.getElementById("chosen-username-result");
 const exitQuiz = document.getElementById("exit-quiz");
+const resultMessage = document.getElementById("result-message");
 
 // Button elements
 const exitQuizYesButton = document.getElementById("yes-btn");
@@ -120,7 +119,6 @@ function submitUsername() {
         if (isValidUsername == true) {
             username = inputUsername.value;
             usernameElement.innerHTML = username;
-            usernameElementResult.innerHTML = username;
             proceedToChooseDifficulty();
         } else {
             alert("Invalid username. Please input a valid username to proceed.");
@@ -336,7 +334,6 @@ function checkAnswer(e) {
    if (questionIndex < (questionSet.length - 1)) {
         nextButton.classList.remove('hide');
     } else {
-        scoreElement.innerHTML = scoreTotal;
         resultsButton.classList.remove('hide');
     }
 }
@@ -435,8 +432,25 @@ function resetAnswers(){
  */
 function showResults() {
     usernameElement.innerHTML = username;
+    resultMessage.innerHTML = generateResultMessage()
     quizGame.classList.add('hide');
     resultsPage.classList.remove('hide');
+}
+
+/**
+ * Based on the user's score, a tailored result message will be displayed
+ * @returns resultMessage
+ */
+function generateResultMessage() {
+    if (scoreTotal < 4) {
+        return "Not bad, " + username + ".\n You scored " + scoreTotal + " out of 10.\n Better luck next time."
+    } else if (scoreTotal >= 4 && scoreTotal < 7) {
+        return "Good try, " + username + "!\n You scored " + scoreTotal + " out of 10.\n I know you can do better!"
+    } else if (scoreTotal >= 7 && scoreTotal <= 9) {
+        return "Congratulations, " + username + "!\n You scored " + scoreTotal + " out of 10.\n You are worthy of the Gods!"
+    } else if (scoreTotal == 10) {
+        return "Amazing, " + username + "!\n You scored " + scoreTotal + " out of 10.\n Athena would be proud!"
+    } 
 }
 
 /**
