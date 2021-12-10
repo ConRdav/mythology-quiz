@@ -26,7 +26,7 @@ header{
     justify-content: center;
 }
 
-#quiz-title{
+#quiz-title h1{
     font-size: 4rem;
     font-weight: 800;
     text-align: center;
@@ -51,6 +51,11 @@ header{
     margin-top:100px;
     border: 10px solid rgb(75, 33, 14);
     border-radius: 5px;
+}
+
+#username-form p{
+    font-size: 1rem;
+    color: red;
 }
 
 input {
@@ -263,6 +268,7 @@ display: flex;
     font-size: 3rem;
     font-weight: 600;
     top:0; 
+    text-align: center;
 }
 
 .replay-btn{
@@ -294,9 +300,9 @@ display: flex;
 
 /* Mobile devices*/
 @media screen and (max-width: 480px){
-    #quiz-title{
+    #quiz-title h1{
         font-size: 2.5rem;
-        font-weight: 800;
+        font-weight: 600;
     } 
 
     #difficulty-title h1{
@@ -426,14 +432,19 @@ display: flex;
 /* Tablet devices*/
 @media screen and (max-width: 768px){
 
-    #quiz-title{
-        font-size: 3rem;
+    #quiz-title h1{
+        font-size: 2.5rem;
         font-weight: 800;
     } 
 
     #difficulty-title h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
+    }
+
+    .difficulty-btn{
+        margin-bottom: 40px;
+        font-size: 1.5rem;
     }
 
     #mortal-rules,
@@ -442,5 +453,20 @@ display: flex;
     #quiz-container,
     #quiz-results{
     width: 80%;
+    height: 80%;
+    }
+
+    .rules-title{
+        font-size: 2rem;
+    }
+    
+    .rules-list{
+        padding:10px;
+        text-align: center;
+    }
+    
+    .rules{
+        font-size: 1.25rem;
+        font-weight: 600;
     }
 }
