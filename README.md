@@ -2,7 +2,7 @@
 
 This quiz is desgined to test your Greek Mythology knowledge. Choose between three diffculties, Mortal, Demi-God and Olympian. And you will have to work your way through 10 questions for each difficulty. But be careful if the timer runs down then you can't answer. Once you've beaten a difficulty why not try the next one and see if you are worthy to be an Olympian yourself. Do you have what it takes?
 
-![Responsiveness](/assets/images/responive-display.webp)
+![Responsiveness](/assets/images/responsive-display.webp)
 
 ## Features
 
@@ -16,7 +16,7 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
 - __Difficulty Selector__
 
     - The difficulty selector allows you to choose how challenging you want the quiz to be. You get the option between three diffculties, Mortal, Demi-God and Olympian each with different time constrainst. For example you only have 10 seconds to answer a question before you're timed out in Olympian difficulty. When clicked each diffculty will take you to their specific quiz rules.
-    ![Difficulty Selector](/assets/images/diifculty-selector-page.webp)
+    ![Difficulty Selector](/assets/images/difficulty-selector-page.webp)
 
 - __Quiz Rules__
 
@@ -51,10 +51,10 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
 ## Testing 
 
 - The choose your username section is responsive across all screen sizes.
-![Responsiveness Choose your username](/assets/images/responive-display.webp)
+![Responsiveness Choose your username](/assets/images/responsive-display.webp)
 
 - The difficultty is responsive and its style is similar on screen sizes. As shown in the image below.
-![Responsiveness Difficulty Selector](/assets/images/difficulty-selector.webp)
+![Responsiveness Difficulty Selector](/assets/images/responsive-difficulty-selector.webp)
 
 -The Quiz rules is responsive on each screen size and easy to read. As shown in the image below.
 ![Responsiveness Quiz Rules](/assets/images/responsive-rules.webp)
