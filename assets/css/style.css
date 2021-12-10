@@ -511,6 +511,23 @@ display: flex;
         font-weight:600;
     }
 
+    #exit-quiz{
+        width: 80%;
+    }
+    
+    #exit-text{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+    #yes-btn{
+        font-size: 1.5rem;
+    }
+    
+    #no-btn{
+        font-size: 1.5rem;
+    }
+
 }
 
 /* Tablet devices*/
