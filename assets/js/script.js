@@ -43,6 +43,13 @@ const inputUsername = document.getElementById("username-value")
 const chooseDifficultyTitle = document.getElementById("difficulty-title")
 const usernameForm = document.getElementById("username-form")
 const createUsernameForm = document.getElementById("create-username-form")
+const usernameElement = document.getElementById("username")
+const exitButton = document.getElementById("exit-btn")
+const replayButton = document.getElementById("replay-btn")
+const exitQuiz = document.getElementById("exit-quiz")
+const exitQuizYesButton = document.getElementById("yes-btn")
+const exitQuizNoButton = document.getElementById("no-btn")
+const resultsButton = document.getElementById("results-btn")
 
 // Game variables
 let questionIndex = 0;
@@ -56,6 +63,7 @@ let timeLeft = null;
 let timerId = null;
 let isAnswerSelected = false;
 let username = ""
+let isGamePaused = false;
 
 var myRegEx = /[^a-z\d]/i;
 
@@ -85,13 +93,18 @@ answerD.addEventListener('click', checkAnswer)
 // Button click
 nextButton.addEventListener('click', nextButtonClicked)
 submitButton.addEventListener('click', submitUsername)
+exitButton.addEventListener('click', exitGameClicked)
+replayButton.addEventListener('click', returnToChooseDifficulty)
+exitQuizYesButton.addEventListener('click', returnToChooseDifficulty)
+exitQuizNoButton.addEventListener('click', returnToQuiz)
+resultsButton.addEventListener('click', showResults)
 
 function submitUsername() {
     if (inputUsername.value != null && inputUsername.value != undefined && inputUsername.value.length > 0) {
         let isValidUsername = !(myRegEx.test(inputUsername.value))
         if (isValidUsername == true) {
             username = inputUsername.value
-            inputUsername.innerHTML = username
+            usernameElement.innerHTML = username
             proceedToChooseDifficulty()
         } else {
             alert("Invalid username. Please input a valid username to proceed.");
@@ -224,14 +237,16 @@ function setTimer() {
 }
 
 function countdown() {
-    if (timeLeft == -1) {
-        clearTimeout(timerId)
-        timeUp()
-    } else if (isAnswerSelected) {
-        console.log('freeze timer')
-    } else {
-        timer.innerHTML = timeLeft
-        timeLeft--;
+    if (isGamePaused != true) {
+        if (timeLeft == -1) {
+            clearTimeout(timerId)
+            timeUp()
+        } else if (isAnswerSelected) {
+            console.log('freeze timer')
+        } else {
+            timer.innerHTML = timeLeft
+            timeLeft--;
+        }
     }
 }
 
@@ -270,13 +285,7 @@ function checkAnswer(e) {
         isGameComplete = true;
         console.log('scoreTotal = ' + scoreTotal)
         scoreElement.innerHTML = scoreTotal
-        nextButton.innerHTML = "Results"
-        console.log('show results page')
-        nextButton.onclick = () => {
-            showResults()
-        }
-        nextButton.classList.remove('hide')
-        // Show results page with score
+        resultsButton.classList.remove('hide')
     }
     console.log('ScoreTotal = ' + scoreTotal)
 }
@@ -358,6 +367,56 @@ function resetAnswers(){
 }
 
 function showResults() {
+    console.log('username = ' + username)
+    usernameElement.innerHTML = username
     quizGame.classList.add('hide')
     resultsPage.classList.remove('hide')
+}
+
+function exitGameClicked() {
+    isGamePaused = true
+    quizGame.classList.add('hide')
+    exitQuiz.classList.remove('hide')
+}
+
+function returnToQuiz() {
+    isGamePaused = false
+    exitQuiz.classList.add('hide')
+    quizGame.classList.remove('hide')
+}
+
+function returnToChooseDifficulty() {
+    quizGame.classList.add('hide')
+    resultsPage.classList.add('hide')
+    exitQuiz.classList.add('hide')
+    resetGame()
+    proceedToChooseDifficulty()
+}
+
+function resetGame() {
+    resetAnswers()
+    resetButtons()
+    resetFlags()
+    resetGameVariables()
+}
+
+function resetGameVariables() {
+    clearTimeout(timerId)
+    questionIndex = 0;
+    questionNumber = 1;
+    questionSet = []
+    selectedAnswer = ""
+    difficulty = null
+    scoreTotal = 0;
+}
+
+function resetFlags() {
+    isGameComplete = false
+    isAnswerSelected = false
+    isGamePaused = false
+}
+
+function resetButtons() {
+    nextButton.classList.add('hide')
+    resultsButton.classList.add('hide')
 }
