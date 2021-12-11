@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&display=swap');
 
 /*Setting font-size for 100% as using rem for font-size*/
+
 *{
     margin: 0;
     padding:0;
@@ -33,6 +34,7 @@ header{
 }
 
 /* Username form styling*/
+
 #username-form-container{
     display:flex;
     text-align: center;
@@ -101,7 +103,6 @@ input {
     padding: 5px 10px;
     background: #DBBEA1FF;
 }
-
 
 /*Quiz rules container styling*/
 
@@ -246,6 +247,7 @@ display: flex;
 }
 
 /*class for correct and wrong answers*/
+
 .correct{
     background:green;
     color: white;
@@ -257,6 +259,7 @@ display: flex;
 }
 
 /* Quiz Results page*/
+
 #quiz-results-container{
     display:flex;
     text-align: center;
@@ -293,6 +296,7 @@ display: flex;
 }
 
 /* Exit quiz page*/
+
 #exit-quiz-container{
     display:flex;
     text-align: center;
@@ -342,6 +346,7 @@ display: flex;
 
 
 /* Class to hide containers until activated by JavaScript*/
+
 .hide{
     display: none;
 }
@@ -535,6 +540,7 @@ display: flex;
 }
 
 /* Tablet devices*/
+
 @media screen and (max-width: 768px){
 
     #quiz-title h1{

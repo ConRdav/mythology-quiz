@@ -432,7 +432,7 @@ function resetAnswers(){
  */
 function showResults() {
     usernameElement.innerHTML = username;
-    resultMessage.innerHTML = generateResultMessage()
+    resultMessage.innerHTML = generateResultMessage();
     quizGame.classList.add('hide');
     resultsPage.classList.remove('hide');
 }
@@ -443,13 +443,13 @@ function showResults() {
  */
 function generateResultMessage() {
     if (scoreTotal < 4) {
-        return "Not bad, " + username + ".\n You scored " + scoreTotal + " out of 10.\n Better luck next time."
+        return "Not bad, " + username + ".\n You scored " + scoreTotal + " out of 10.\n Better luck next time.";
     } else if (scoreTotal >= 4 && scoreTotal < 7) {
-        return "Good try, " + username + "!\n You scored " + scoreTotal + " out of 10.\n I know you can do better!"
+        return "Good try, " + username + "!\n You scored " + scoreTotal + " out of 10.\n I know you can do better!";
     } else if (scoreTotal >= 7 && scoreTotal <= 9) {
-        return "Congratulations, " + username + "!\n You scored " + scoreTotal + " out of 10.\n You are worthy of the Gods!"
+        return "Congratulations, " + username + "!\n You scored " + scoreTotal + " out of 10.\n You are worthy of the Gods!";
     } else if (scoreTotal == 10) {
-        return "Amazing, " + username + "!\n You scored " + scoreTotal + " out of 10.\n Athena would be proud!"
+        return "Amazing, " + username + "!\n You scored " + scoreTotal + " out of 10.\n Athena would be proud!";
     } 
 }
 

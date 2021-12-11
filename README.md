@@ -15,18 +15,18 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
 
 - __Difficulty Selector__
 
-    - The difficulty selector allows you to choose how challenging you want the quiz to be. You get the option between three diffculties, Mortal, Demi-God and Olympian each with different time constrainst. For example you only have 10 seconds to answer a question before you're timed out in Olympian difficulty. When clicked each diffculty will take you to their specific quiz rules.
+    - The difficulty selector allows you to choose how challenging you want the quiz to be. You get the option between three diffculties, Mortal, Demi-God and Olympian each with different time constraint. For example you only have 10 seconds to answer a question before you're timed out in Olympian difficulty. When clicked each diffculty will take you to their specific quiz rules.
     ![Difficulty Selector](/assets/images/difficulty-selector-page.webp)
 
 - __Quiz Rules__
 
-  - Depending on the difficulty picked you'll be taken to the rules page which will describe how the quiz works.However if you don't like the difficulty you picked you'll be able to head back to the choose difficulty page by clicking the change difficulty button. Once you have read the rules press 'Start Quiz' to start the quiz.
+  - Depending on the difficulty picked you will be taken to the rules page which will describe how the quiz works.However if you don't like the difficulty you picked you will be able to head back to the choose difficulty page by clicking the change difficulty button. Once you have read the rules press 'Start Quiz' to start the quiz.
   ![Quiz Rules](/assets/images/rules-page.webp)
 
 - __Quiz Game__ 
 
   - Once you start the quiz the user will be presented with a question counter, a timer, the question itself and the answer button options.
-  - Once the user picks and answer it will turn green if correct or red if wrong. Once an answer is selected the user will not be able to select another and the next button will show up for them to move onto the next question.
+  - Once the user picks an answer it will turn green if correct or red if wrong. Once an answer is selected the user will not be able to select another and the next button will show up for them to move onto the next question.
   -Also if the timer runs to zero the answer buttons will be locked and show you the correct answer.
   ![Quiz Game](/assets/images/quiz-game.webp)
   ![Quiz Game Correct](/assets/images/quiz-game-correct-answer.webp)
@@ -35,12 +35,12 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
 
 - __Quiz Game Exit Quiz__ 
 
-  - Once inside the quiz you'll be able to leave the game by pressing the exit button. From there you'll be shown a message asking if you really want to leave the quiz with 'yes' and 'no' buttons. If you click yes you'll be taken to the difficulty selector screen. But if you select no you'll be taken back to where you were in the quiz and the timer will start counting down again.
+  - Once inside the quiz you will be able to leave the game by pressing the exit button. From there you will be shown a message asking if you really want to leave the quiz with 'yes' and 'no' buttons. If you click yes you will be taken to the difficulty selector screen. But if you select no you will be taken back to where you were in the quiz and the timer will start counting down again.
   ![Exit Quiz](/assets/images/quiz-game-exit.webp)
 
 - __Results Page__
 
-  - Once all questions have been answered the user will be shown a button to head to the results page.On the results page the user will be able to see how many questions they got right and have an option to play again. If you click the play again button you'll be taken to the difficulty selector screen so you try the quiz at a different difficulty.
+  - Once all questions have been answered the user will be shown a button to head to the results page.On the results page the user will be able to see how many questions they got right and have an option to play again. If you click the play again button you will be taken to the difficulty selector screen so you try the quiz at a different difficulty.
   ![Quiz Results](/assets/images/quiz-game-results.webp)
 
  ### Features Left to Implement
@@ -68,7 +68,7 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
 - The Quiz results page is responsive on all screen sizes and there were no issues when trying to make it responsive.
 ![Responsiveness Quiz Results](/assets/images/responsive-results.webp)
 
--This website was tested on a Iphone 11, Ipad Air 2 and  where all aspects of the website were responsive.
+-This website was tested on an Iphone 11, Ipad Air 2 and  where all aspects of the website were responsive.
 
 
 ### Validator Testing 
@@ -86,7 +86,7 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
 -![Lighthouse](/assets/images/lighthouse.webp)
 
 ### Unfixed Bugs
-
+- Whilst on mobile and tablet devices because it doesn't use a cursor there is no :hover affect so theres a slight stickiness when the buttons pressed and you have to click elsewhere to show the colour of the answer button. This isn't so much of an issue because if its right no other answers are highlighted where as if it's wrong you will know as the correct answer will highlight green.
 
 ## Deployment
 
@@ -95,7 +95,7 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
   - From the source section drop-down menu, select the Main Branch
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - 
+The live link can be found here - https://conrdav.github.io/mythology-quiz/
 
 ### Content 
 - Some of the questions in the quiz were taken from (https://meebily.com/greek-mythology-trivia-questions-answers/)
