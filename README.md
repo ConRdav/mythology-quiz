@@ -1,6 +1,6 @@
 # GREEK MYTHOLOGY QUIZ
 
-This quiz is desgined to test your Greek Mythology knowledge. Choose between three diffculties, Mortal, Demi-God and Olympian. And you will have to work your way through 10 questions for each difficulty. But be careful if the timer runs down then you can't answer. Once you've beaten a difficulty why not try the next one and see if you are worthy to be an Olympian yourself. Do you have what it takes?
+This quiz is desgined to test your Greek Mythology knowledge. Choose between three diffculties, Mortal, Demi-God and Olympian. And you will have to work your way through 10 questions for each difficulty. But be careful, if the timer runs down then you cannot answer. Once you've beaten a difficulty why not try the next one and see if you are worthy to be an Olympian yourself. Do you have what it takes?
 
 ![Responsiveness](/assets/images/responsive-display.webp)
 
@@ -10,17 +10,17 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
 
 - __Choose Your Username__
 
-    - Here you pick you username for the quiz. You are limited to using numbers(0-9) and letters(a-z). If you entered a special character an alert will pop up on your browser and warn you to pick a username using letters and numbers. Once your username is selected press submit and you'll be taken to the difficulty selector page.
+    - Here you pick you username for the quiz. You are limited to using numbers(0-9) and letters(a-z), and your username cannot exceed 8 characters. If you entered a special character an alert will pop up on your browser and warn you to pick a valid username using letters and numbers. Once your username is selected press submit and you will be taken to the difficulty selector page.
     ![Choose your username](/assets/images/create-username-page.webp)
 
 - __Difficulty Selector__
 
-    - The difficulty selector allows you to choose how challenging you want the quiz to be. You get the option between three diffculties, Mortal, Demi-God and Olympian each with different time constraint. For example you only have 10 seconds to answer a question before you're timed out in Olympian difficulty. When clicked each diffculty will take you to their specific quiz rules.
+    - The difficulty selector allows you to choose how challenging you want the quiz to be. You get the option between three diffculties - Mortal, Demi-God and Olympian - each with different time constraint. For example you only have 10 seconds to answer a question before you're timed out in Olympian difficulty. When clicked, each diffculty will take you to their specific quiz rules.
     ![Difficulty Selector](/assets/images/difficulty-selector-page.webp)
 
 - __Quiz Rules__
 
-  - Depending on the difficulty picked you will be taken to the rules page which will describe how the quiz works.However if you don't like the difficulty you picked you will be able to head back to the choose difficulty page by clicking the change difficulty button. Once you have read the rules press 'Start Quiz' to start the quiz.
+  - Depending on the difficulty picked you will be taken to the rules page which will describe how the quiz works. However, if you don't like the difficulty you picked you will be able to head back to the choose difficulty page by clicking the change difficulty button. Once you have read the rules press 'Start Quiz' to start the quiz.
   ![Quiz Rules](/assets/images/rules-page.webp)
 
 - __Quiz Game__ 
@@ -42,11 +42,6 @@ This quiz is desgined to test your Greek Mythology knowledge. Choose between thr
 
   - Once all questions have been answered the user will be shown a button to head to the results page.On the results page the user will be able to see how many questions they got right and have an option to play again. If you click the play again button you will be taken to the difficulty selector screen so you try the quiz at a different difficulty.
   ![Quiz Results](/assets/images/quiz-game-results.webp)
-
- ### Features Left to Implement
- 
- - I would like to add score specific messages for score ranges. For example if you got between 1-4 questions right a message saying "Better luck next time!".
-
 
 ## Testing 
 
