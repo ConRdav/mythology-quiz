@@ -61,6 +61,7 @@ let scoreTotal = 0;
 let timeLeft = null;
 let timerId = null;
 let username = "";
+let inpUsername = "";
 
 // Game flags
 let isGamePaused = false;
@@ -115,9 +116,10 @@ resultsButton.addEventListener('click', showResults);
  */
 function submitUsername() {
     if (inputUsername.value != null && inputUsername.value != undefined && inputUsername.value.length > 0) {
-        let isValidUsername = !(myRegEx.test(inputUsername.value)) && inputUsername.value.length <= 8;
+        inpUsername = inputUsername.value.trim();
+        let isValidUsername = !(myRegEx.test(inpUsername)) && inpUsername.length <= 8 && inpUsername.length > 0;
         if (isValidUsername == true) {
-            username = inputUsername.value;
+            username = inpUsername;
             usernameElement.innerHTML = username;
             proceedToChooseDifficulty();
         } else {

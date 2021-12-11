@@ -19,6 +19,8 @@ body{
     background-attachment: fixed;
     background-size: cover;
     background-color: rgb(243, 234, 220);
+    overflow-y:auto;
+    max-height:100%;
 }
     
 
@@ -359,6 +361,8 @@ display: flex;
 
 /* Mobile devices*/
 @media screen and (max-width: 480px){
+    
+    /*Username screen*/
     #username-form-container{
         font-size: 1.5rem;
         font-weight: 600;
@@ -366,6 +370,8 @@ display: flex;
 
     #username-form{
         width:80%;
+        margin-top:20px;
+        
     }
     
     #username-form p{
@@ -385,6 +391,7 @@ display: flex;
         background: white;
         text-align: center;
     }
+
     #quiz-title h1{
         font-size: 2.5rem;
         font-weight: 600;
