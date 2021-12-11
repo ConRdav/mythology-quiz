@@ -27,6 +27,7 @@ body{
 header{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #quiz-title h1{
@@ -39,6 +40,7 @@ header{
 
 #username-form-container{
     display:flex;
+    flex-wrap: wrap;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -81,6 +83,7 @@ input {
 #difficulty-title h1,
 #difficulty-title div{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align:center;
@@ -110,6 +113,7 @@ input {
 
 .rules-container{
     display:flex;
+    flex-wrap: wrap;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -173,6 +177,7 @@ input {
 
 #quiz-game-container{
     display:flex;
+    flex-wrap: wrap;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -193,8 +198,9 @@ input {
 }
 
 #game-info-box{
-justify-content: space-evenly;
-display: flex;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #question-counter{
@@ -234,7 +240,8 @@ display: flex;
 
 .controls{
     justify-content: space-evenly;
-    display: flex;  
+    display: flex; 
+    flex-wrap: wrap; 
 }
 
 #exit-btn,
@@ -264,6 +271,7 @@ display: flex;
 
 #quiz-results-container{
     display:flex;
+    flex-wrap: wrap;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -301,6 +309,7 @@ display: flex;
 
 #exit-quiz-container{
     display:flex;
+    flex-wrap: wrap;
     text-align: center;
     align-items: center;
     justify-content: center;
